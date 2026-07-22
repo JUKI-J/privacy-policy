@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeLync Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #1d1d1f;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: #1d1d1f;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #1d1d1f;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #515154;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #515154;
+            line-height: 1.8;
+        }
+
+        .update-date {
+            color: #86868b;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            background-color: #f5f5f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f7;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch a {
+            color: #007AFF;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="https://github.com/JUKI-J/privacy-policy/blob/main/timelync-kr.html">한국어</a>
+            <a href="#en">English</a>
+        </div>
+
+        <h1>TimeLync Privacy Policy</h1>
+        <p class="update-date">Effective Date: July 16, 2026</p>
+
+        <p>TimeLync ("the App", "we", "our") is developed and operated by the developer reachable at jju.ki@hotmail.com.</p>
+        <p>This Privacy Policy explains what information TimeLync collects, how it is used, and your rights regarding that information.</p>
+
+        <div class="section">
+            <h2>What We Collect</h2>
+
+            <p>TimeLync collects only the minimum data necessary for the app to function.</p>
+
+            <h3>Device Identifier (UUID)</h3>
+            <ul>
+                <li><strong>What:</strong> A UUID derived from your device — a unique string such as <code>A1B2C3D4-E5F6-...</code></li>
+                <li><strong>Why:</strong> To identify your device within a sync room so the correct stopwatch state is delivered to you and displayed to other participants</li>
+                <li><strong>Retention:</strong> Session-only. While a room is active, your device UUID is held in the relay server's temporary session state (Cloudflare) so participants can be identified and stopwatch messages routed. It is deleted when the room ends. We keep no separate server logs, analytics, or long-term records of it.</li>
+            </ul>
+
+            <h3>Device Name</h3>
+            <ul>
+                <li><strong>What:</strong> Your device's display name. On iOS 16 and later, apps without a special entitlement receive a generic model name (typically "iPhone" or "iPad") rather than a personalized name.</li>
+                <li><strong>Why:</strong> Transmitted to and displayed on other participants' devices so they can tell devices apart during a session</li>
+                <li><strong>Retention:</strong> Same as the device UUID above — held only in the temporary session state while the room is active and deleted when the room ends.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>What We Do Not Collect</h2>
+
+            <p>TimeLync does not collect, store, or process any of the following:</p>
+            <ul>
+                <li>Name, email address, phone number, or any other personal identifier</li>
+                <li>Apple ID or any account credentials</li>
+                <li>Location data (GPS or network-based)</li>
+                <li>Contacts or address book</li>
+                <li>Browsing history or cross-app usage tracking</li>
+                <li>Advertising identifiers (IDFA)</li>
+                <li>Health or fitness data</li>
+                <li>Financial or payment information</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Third-Party Services</h2>
+
+            <p>We do not sell, rent, or share your data with any third parties. We do not use any third-party analytics, advertising, or tracking SDKs.</p>
+            <p><strong>Cloudflare</strong> hosts the relay server (<code>timelync-api.setlog.net</code>) used for remote room synchronization. Room state (device identifiers, device names, and room settings) is held in Cloudflare's session storage only while the room is active and is deleted when the room ends; sync messages are relayed between participants and not retained. We keep no separate server logs or analytics of this data. Cloudflare's privacy practices are governed by <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Data Stored on Your Device</h2>
+
+            <p>Lap times and session history are stored locally on your device using Apple's SwiftData framework. This data never leaves your device and is not uploaded to any server. You can delete any or all session records from within the app at any time.</p>
+        </div>
+
+        <div class="section">
+            <h2>Children's Privacy</h2>
+
+            <p>TimeLync does not knowingly collect information from children under 13. The app contains no features directed at children.</p>
+        </div>
+
+        <div class="section">
+            <h2>Changes to This Policy</h2>
+
+            <p>If we make material changes, we will update the Effective Date above. Significant changes will also be noted in the App Store release notes.</p>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+
+            <p>For any privacy-related questions or requests:</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> jju.ki@hotmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
