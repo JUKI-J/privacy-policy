@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimerLync Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #1d1d1f;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: #1d1d1f;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #1d1d1f;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #515154;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #515154;
+            line-height: 1.8;
+        }
+
+        .update-date {
+            color: #86868b;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            background-color: #f5f5f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f7;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch a {
+            color: #007AFF;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="https://juki-j.github.io/privacy-policy/timerlync-kr.html">한국어</a>
+            <a href="#en">English</a>
+        </div>
+
+        <h1>TimerLync Privacy Policy</h1>
+        <p class="update-date">Effective Date: July 27, 2026</p>
+
+        <p>TimerLync ("the App", "we", "our") is developed and operated by the developer reachable at setlog.net</p>
+        <p>TimerLync is a free countdown timer that keeps the same countdown in sync across several devices. It has no user accounts, no advertising, and no in-app purchases. This Privacy Policy explains what information the App collects, how it is used, and your rights regarding that information.</p>
+
+        <div class="section">
+            <h2>What We Collect</h2>
+
+            <p>TimerLync collects only the minimum data necessary for a shared countdown to work. There is nothing to collect until you create or join a room.</p>
+
+            <h3>Device Identifier (UUID)</h3>
+            <ul>
+                <li><strong>What:</strong> A random UUID the App generates on first launch — a unique string such as <code>A1B2C3D4-E5F6-...</code>. It is not your Apple ID, your advertising identifier, or any identifier assigned by Apple, and it is replaced with a new one if you delete and reinstall the App.</li>
+                <li><strong>Why:</strong> To identify your device within a room so the correct countdown is delivered to you and so other participants can be told apart.</li>
+                <li><strong>Retention:</strong> Session-only. While a room is active, your device UUID is held in the relay server's temporary session state (Cloudflare) so participants can be identified and timer messages routed. It is deleted when the room ends. We keep no separate server logs, analytics, or long-term records of it.</li>
+            </ul>
+
+            <h3>Display Name</h3>
+            <ul>
+                <li><strong>What:</strong> The name shown next to your device in a room. If you have not set a nickname, this is your device's model name — on iOS 17 and later, apps without a special entitlement receive a generic name (typically "iPhone" or "iPad") rather than a personalized one. If you do set a nickname in Settings, that text is used instead, so please avoid entering anything you would not want other participants in the room to see.</li>
+                <li><strong>Why:</strong> Transmitted to and displayed on other participants' devices so they can tell devices apart during a session.</li>
+                <li><strong>Retention:</strong> Same as the device UUID above — held only in the temporary session state while the room is active and deleted when the room ends.</li>
+                <li><strong>Who can see it:</strong> A room is identified by a short room code, and the relay does not verify who is holding it. Anyone who obtains a room's code can join that room and will see the display names of everyone in it. Treat the room code like a meeting link: share it only with the people you want in the session.</li>
+            </ul>
+
+            <h3>Countdown Data</h3>
+            <ul>
+                <li><strong>What:</strong> The countdown's end time and the control events that change it (start, pause, resume, add time, and similar).</li>
+                <li><strong>Why:</strong> This is the shared state that keeps every device on the same countdown.</li>
+                <li><strong>Retention:</strong> Relayed between participants and never stored on the server.</li>
+            </ul>
+
+            <h3>Room Information Broadcast to Nearby Devices</h3>
+            <ul>
+                <li><strong>What:</strong> While you are hosting a room, the App advertises it to nearby devices over Bluetooth and Wi-Fi and on your local network. The advertisement contains the room code, the host's display name, the number of participants, whether the room requires a PIN, and a protocol version. It does not contain any device identifier.</li>
+                <li><strong>Why:</strong> So people next to you can find and join the room without typing anything.</li>
+                <li><strong>Retention:</strong> Broadcast only while you are hosting; nothing is stored. Note that any nearby device scanning for rooms can see this advertisement before it joins, which is how nearby discovery works on every platform.</li>
+            </ul>
+
+            <h3>IP Address</h3>
+            <ul>
+                <li><strong>What:</strong> The IP address your device connects from, when — and only when — a room uses the remote relay.</li>
+                <li><strong>Why:</strong> Our hosting provider needs it to route the connection, and we use it briefly as an anti-abuse counter so a single source cannot create or join an unlimited number of rooms.</li>
+                <li><strong>Retention:</strong> The anti-abuse counter expires after about a minute. It is never linked to your device identifier, your display name, or any room.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>What We Do Not Collect</h2>
+
+            <p>TimerLync does not collect, store, or process any of the following:</p>
+            <ul>
+                <li>Name, email address, phone number, or any other personal identifier</li>
+                <li>Apple ID or any account credentials — the App has no sign-in</li>
+                <li>Location data (GPS or network-based)</li>
+                <li>Contacts or address book</li>
+                <li>Browsing history or cross-app usage tracking</li>
+                <li>Advertising identifiers (IDFA)</li>
+                <li>Health or fitness data</li>
+                <li>Financial or payment information — TimerLync is free and has no in-app purchases</li>
+            </ul>
+            <p>We do not use any third-party analytics, advertising, attribution, or crash-reporting SDKs. Nothing in the App profiles you or follows you across other apps or websites.</p>
+        </div>
+
+        <div class="section">
+            <h2>Permissions the App Asks For</h2>
+
+            <ul>
+                <li><strong>Camera</strong> — only to scan a room's QR code when you choose to join that way. The camera preview is processed on your device to read the code; no image or video is stored, and none is transmitted anywhere.</li>
+                <li><strong>Local Network</strong> — to find and connect to rooms hosted by devices on the same Wi-Fi network.</li>
+                <li><strong>Bluetooth</strong> — used by the nearby-device connection to reach devices that are not on the same Wi-Fi network.</li>
+                <li><strong>Notifications</strong> — so the alarm can fire at zero even if the App is in the background or the connection has dropped. The notification is scheduled on your device.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How Devices Connect</h2>
+
+            <p>TimerLync tries to keep devices in sync locally first and only falls back to the internet when it has to.</p>
+            <ul>
+                <li><strong>Nearby connections (Bluetooth / Wi-Fi):</strong> Peer-to-peer and encrypted in transit. Nothing passes through our servers.</li>
+                <li><strong>Local network connections:</strong> A faster direct path used between devices on the same network. This path is not encrypted, so anyone who can observe traffic on that network could see the room code, display names, and timer events. The App does not use this path for rooms protected by a PIN.</li>
+                <li><strong>Remote relay:</strong> Used when devices are not near each other. The connection is encrypted in transit (TLS).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Apple Watch</h2>
+
+            <p>If you use the Apple Watch app, your iPhone sends the current countdown's end time and basic room information to your own paired Watch. When your iPhone is out of range, the Watch can connect to the relay on its own; it uses a separate identifier generated on the Watch, handled exactly like the iPhone's device identifier described above.</p>
+        </div>
+
+        <div class="section">
+            <h2>Third-Party Services</h2>
+
+            <p>We do not sell, rent, or share your data with any third parties.</p>
+            <p><strong>Cloudflare</strong> hosts the relay server (<code>timerlync-api.setlog.net</code>) used for remote room synchronization. Room state (device identifiers, display names, and room settings) is held in Cloudflare's session storage only while the room is active and is deleted when the room ends; sync messages are relayed between participants and not retained. Device identifiers and display names are sent in request headers rather than in the address of the request, and application request logging is turned off, so they are not written to our logs. As our infrastructure provider, Cloudflare necessarily processes connection metadata such as IP addresses in order to deliver the traffic. Cloudflare's privacy practices are governed by <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</p>
+            <p><strong>Apple's time service</strong> (<code>time.apple.com</code>) is queried to correct your device's clock, which is what makes every device reach zero at the same moment. This is a standard network time request; it carries timestamps only and does not include any identifier from the App.</p>
+        </div>
+
+        <div class="section">
+            <h2>Data Stored on Your Device</h2>
+
+            <p>The following stay on your device and are never uploaded to any server:</p>
+            <ul>
+                <li>Timer presets, saved sequences, and any labels you type for them</li>
+                <li>Session history of completed timers</li>
+                <li>App settings, your nickname, and the device identifier described above</li>
+                <li>A snapshot of the running session, so an interrupted timer can be offered for restore the next time you open the App. While you are in a room this snapshot includes that room's participant list (their device identifiers and display names) and, if the room has one, its PIN. It is cleared when you leave the room.</li>
+            </ul>
+            <p>You can delete presets and session history from within the App at any time, and removing the App removes all of it. Like other app data, these files may be included in the encrypted backups you make of your device.</p>
+        </div>
+
+        <div class="section">
+            <h2>Children's Privacy</h2>
+
+            <p>TimerLync does not knowingly collect information from children under 13. The App contains no features directed at children.</p>
+        </div>
+
+        <div class="section">
+            <h2>Changes to This Policy</h2>
+
+            <p>If we make material changes, we will update the Effective Date above. Significant changes will also be noted in the App Store release notes.</p>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+
+            <p>For any privacy-related questions or requests:</p>
+            <div class="contact-info">
+                <p>https://tally.so/r/nrxJXo</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
