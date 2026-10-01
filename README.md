@@ -11,3 +11,7 @@
 ## slplayer (macOS) — 영어·한국어 (2026-09-13, 그 밖의 언어는 영어 기본)
 - https://juki-j.github.io/privacy-policy/slplayer-en.html
 - https://juki-j.github.io/privacy-policy/slplayer-kr.html
+
+## IntervalRunner (iOS · watchOS) — 영어·한국어 (2026-09-29, 그 밖의 언어는 영어 기본)
+- https://juki-j.github.io/privacy-policy/intervalrunner-en.html
+- https://juki-j.github.io/privacy-policy/intervalrunner-kr.html
