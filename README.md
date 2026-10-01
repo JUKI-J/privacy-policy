@@ -15,3 +15,6 @@
 ## IntervalRunner (iOS · watchOS) — 영어·한국어 (2026-09-29, 그 밖의 언어는 영어 기본)
 - https://juki-j.github.io/privacy-policy/intervalrunner-en.html
 - https://juki-j.github.io/privacy-policy/intervalrunner-kr.html
+
+## LunchLog 급식로그 (iOS · Android) — 한국어 (2026-10-02, 국내 전용)
+- https://juki-j.github.io/privacy-policy/lunchlog-kr.html
