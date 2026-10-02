@@ -153,13 +153,13 @@
         </div>
 
         <h1>RunVue Privacy Policy</h1>
-        <p class="update-date">Effective Date: October 1, 2026</p>
+        <p class="update-date">Effective Date: October 1, 2026 · Last updated: October 2, 2026</p>
 
         <p>RunVue ("the App", "we", "our") is developed and operated by the developer reachable at setlog.net</p>
         <p>RunVue turns your runs, recorded in Apple's Health app, into 3D replay videos entirely on your device. The App has no user accounts, no advertising, and no analytics or tracking SDKs. This Privacy Policy explains what the App accesses on your device, how it is used, and your rights regarding that information.</p>
 
         <div class="highlight">
-            <p><strong>In short:</strong> the developer does not collect your data. Your health and route data are processed entirely on your device and never sent to any server. The only thing the App downloads from our server is the map tiles needed to build a video, and that request contains no route, coordinates, device identifier, or account information. Your data is never sold, never shared with third parties, and never used for advertising.</p>
+            <p><strong>In short:</strong> the developer does not collect your data. Your health and route data are processed entirely on your device and never sent to any server. The only thing the App downloads from our server is the map tiles needed to build a video, and that request contains only a map tile number (a grid cell roughly tens of kilometers wide) — no route, coordinates, device identifier, or account information. Our hosting provider, Cloudflare, may process your IP address when you make that request. Your data is never sold, never shared with third parties, and never used for advertising.</p>
         </div>
 
         <div class="section">
@@ -170,12 +170,12 @@
             <h3>Health Data (HealthKit, Read-Only)</h3>
             <ul>
                 <li><strong>Read from Health — 5 required types:</strong> workouts, workout route, heart rate, running speed, and walking + running distance. These are required to build a replay video.</li>
-                <li><strong>Read from Health — 3 optional types:</strong> active energy (calories), body weight, and date of birth. These are used to show calories and heart-rate zone colors in the video; the App still works if you deny them (the related display is simply left out or uses a default). Date of birth is used only momentarily to compute a maximum heart rate (220 − age); the raw value itself is never stored anywhere.</li>
+                <li><strong>Read from Health — 1 optional type:</strong> active energy (calories). If a measured value is recorded in Health it is shown as-is in the video's calorie field; if none is recorded or you deny access, the App shows an estimate marked with "~", computed from the distance and a fixed standard body weight (70 kg) that is the same for every user — no personal body information is used. <strong>The App does not read your body weight, date of birth, or age</strong> — so that neither can be inferred from a video you share; heart-rate zone colors use a fixed reference that does not depend on age. Body-weight and date-of-birth read permissions you may have granted to an earlier version are no longer used, and you can turn them off in Health's data-access settings.</li>
                 <li><strong>Never written to Health:</strong> the App does not write any data to the Health app (it never requests write access).</li>
                 <li><strong>Where it goes:</strong> a copy of what the App reads is kept only on your device, in the App's own database. It is never uploaded to any server, and this copy is excluded from iCloud backups.</li>
-                <li><strong>Temporary use during rendering:</strong> values derived from heart rate, calories, body weight, and date of birth are written to a temporary file on your device only while a video is being rendered, and are deleted immediately afterward.</li>
+                <li><strong>Temporary use during rendering:</strong> heart-rate and calorie values are written to a temporary file on your device only while a video is being rendered, and are deleted immediately afterward.</li>
                 <li><strong>How it is not used:</strong> Health data is never used for advertising, marketing, or data mining, is never sold, and is never disclosed to advertisers, data brokers, or any other third party.</li>
-                <li><strong>Note:</strong> heart rate, average BPM, date and time, and (if allowed) calories are rendered onto the video's on-screen display (HUD), so sharing the video shares those figures too. See "Sharing" below.</li>
+                <li><strong>Note:</strong> heart rate, average BPM, date and time, and (if you allow reading it) calories are rendered onto the video's on-screen display (HUD), so sharing the video shares those figures too. See "Sharing" below.</li>
             </ul>
 
             <h3>Map Tile Downloads (unrelated to location permission)</h3>
@@ -222,7 +222,7 @@
         <div class="section">
             <h2>Purchases (Subscriptions)</h2>
 
-            <p>RunVue Pro is sold as an auto-renewing monthly or yearly subscription through the App Store (removes the watermark, unlocks camera height). Purchases, free trials, billing, renewals, refunds, and Family Sharing are handled entirely by Apple using StoreKit. We never see or store your Apple Account details or payment information. The App reads your subscription status from Apple on your device to unlock Pro features and keeps a small cached copy of that status on the device so Pro also works offline. You can manage or cancel a subscription in Settings → your name → Subscriptions.</p>
+            <p>RunVue Pro is sold as an auto-renewing monthly or yearly subscription through the App Store (unlocks every playback speed from 2x to 60x, the Cinematic and Calm camera presets, and camera height and zoom). Videos at 1x and Summary speed, the Nav camera, and the pace and heart-rate waveform are free with no limit on how many you make. The small RunVue watermark appears in every video, free or Pro. Purchases, free trials, billing, renewals, refunds, and Family Sharing are handled entirely by Apple using StoreKit. We never see or store your Apple Account details or payment information. The App checks the purchase (transaction) information that Apple keeps on your device through StoreKit to unlock Pro features; it does not make its own copy of your subscription status or send it to any server. You can manage or cancel a subscription in Settings → your name → Subscriptions.</p>
         </div>
 
         <div class="section">
@@ -233,7 +233,7 @@
                 <li>A copy of your run list — copies of the workouts and routes read from the Health app (plus anything imported from files)</li>
                 <li>Library videos — your finished replay videos (up to 30, automatically trimmed by storage limits)</li>
                 <li>Map cache — downloaded map tiles and place-name files (up to 500MB)</li>
-                <li>Settings and a cached copy of your subscription status</li>
+                <li>Settings (subscription status comes from the transaction information Apple StoreKit keeps on your device; the App keeps no separate copy)</li>
             </ul>
             <p>The copy of data read from Health, and anything derived from it, is <strong>excluded from iCloud backups</strong>. RunVue does not use iCloud or CloudKit to sync data.</p>
         </div>
@@ -265,7 +265,7 @@
                 <li><strong>Delete health records:</strong> Settings → Advanced → Delete Health Records removes only the App's own copy (your run list and route copies). The original data in the Health app is left untouched.</li>
                 <li><strong>Delete all data:</strong> Settings → Advanced → Delete All Data (two-step confirmation) removes the App's database, library videos, map cache, and settings. The original data in the Health app is not affected.</li>
                 <li><strong>Uninstall:</strong> removing the App removes its data from that device. Original data already in the Health app stays there until you delete it yourself in the Health app.</li>
-                <li><strong>Subscription:</strong> the subscription itself is managed by Apple; the App keeps only a small cached copy of the status.</li>
+                <li><strong>Subscription:</strong> the subscription itself is managed by Apple; the App only reads the status from StoreKit's local transaction information.</li>
             </ul>
         </div>
 
@@ -276,9 +276,20 @@
         </div>
 
         <div class="section">
+            <h2>Hosting Providers and International Data Transfers</h2>
+
+            <p>Our map tile storage is hosted by Cloudflare, Inc. (United States; requests are served from a Cloudflare data center close to you). When the App downloads map tiles, Cloudflare receives your IP address and the map tile number. We do not store request logs; Cloudflare may keep short-lived technical counters (for example, for rate limiting) under its own policy. Your health data and routes are never sent to Cloudflare or anyone else. If you submit the contact form, it is hosted by Tally BV (Belgium, EU) and receives what you type, including your email address if you enter one. Purchases are processed directly by Apple. If you do not want these transfers, you can avoid downloading maps for new areas or stop using the App.</p>
+        </div>
+
+        <div class="section">
             <h2>Changes to This Policy</h2>
 
             <p>If we make material changes, we will update the Effective Date above. Significant changes will also be noted in the App Store release notes.</p>
+            <h3>Change history</h3>
+            <ul>
+                <li>October 1, 2026: First published</li>
+                <li>October 2, 2026: Corrected the Pro subscription description and the description of how subscription status is kept; added hosting and international transfer details</li>
+            </ul>
         </div>
 
         <div class="section">
