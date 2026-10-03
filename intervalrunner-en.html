@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,6 +93,10 @@
             margin-bottom: 40px;
         }
 
+        .table-wrap {
+            overflow-x: auto;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -146,72 +149,33 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="en">
         <div class="lang-switch">
             <a href="https://juki-j.github.io/privacy-policy/intervalrunner-kr.html">한국어</a>
             <a href="#en">English</a>
         </div>
 
         <h1>IntervalRunner Privacy Policy</h1>
-        <p class="update-date">Effective Date: September 30, 2026</p>
+        <p class="update-date">Effective Date: October 3, 2026</p>
 
-        <p>IntervalRunner ("the App", "we", "our") is developed and operated by the developer reachable at setlog.net</p>
-        <p>IntervalRunner is an interval running app for iPhone and Apple Watch. You set time, distance, or heart-rate intervals and the App alerts you by voice, sound, and haptics when you drift from your target pace. The App has no user accounts, no advertising, no analytics or tracking SDKs, and no server of ours. This Privacy Policy explains what the App accesses on your device, how it is used, and your rights regarding that information.</p>
+        <p>IntervalRunner ("the App", "we", "our") is developed and operated by JUKI, an individual developer in the Republic of Korea (business registration number 604-20-14584). Contact: <a href="mailto:support@setlog.net">support@setlog.net</a>.</p>
+        <p>IntervalRunner is an interval running app. You set time, distance, or heart-rate intervals, and the App alerts you by voice, sound, and haptics or vibration when you drift from your target pace. This Privacy Policy covers every version of the App: the app for <strong>iPhone and Apple Watch</strong> (iOS and watchOS) and the app for <strong>Android phones and Wear OS watches</strong>. Where the versions work differently, the section says which version it describes. In every version, the App has no user accounts, and we do not operate a server for it.</p>
 
         <div class="highlight">
-            <p><strong>In short:</strong> the developer does not collect your data. Your health, location, and workout data stay on your device and, if you allow it, are written to the Health app. It is never sent to us, never sold, never shared with third parties, and never used for advertising.</p>
+            <p><strong>In short:</strong> in every version, your health, location, and running data are stored on your devices. The App does not send them to us or to any server of ours, and they are never sold or used for advertising. They leave your device only through features you control: files you export or choose to send us (Sections 11 and 12), your device backups (Section 10), watch sync (Section 9), and maps, which load map images for the area shown (Section 5).</p>
+            <p><strong>iPhone and Apple Watch:</strong> the developer does not collect your data through the App. The only exceptions are a message or a diagnostics file you choose to send us (Sections 12 and 20). Your health, location, and workout data stay on your device and, if you allow it, are written to the Health app. The App does not share them with third parties. This version has no advertising and no analytics or tracking SDKs.</p>
+            <p><strong>Android and Wear OS:</strong> the Free version shows ads: Google AdMob provides them using your device's advertising ID (which you can reset or delete) and app set ID, your IP address (from which a general location can be estimated), how you interact with ads, and diagnostics from the ad SDK. Where the law requires it, you are asked for consent first. <strong>Health, location, and running data are never used for ads and are never passed to the ad SDK.</strong> While you have Pro, there are no ads and the ad SDK is not started. If the birth year you enter shows you are under 18, the App shows no ads. Google's map code runs only when you open a run's map; map images for that area are then loaded from Google.</p>
         </div>
 
         <div class="section">
-            <h2>Data the App Uses</h2>
-
-            <p>Everything below is processed on your device only. Each permission is requested when it is first needed, and you can change it at any time in Settings.</p>
-
-            <h3>Health Data (HealthKit)</h3>
-            <ul>
-                <li><strong>Written to Health (with your permission):</strong> workouts (outdoor or indoor running, including the interval segments), distance, active energy, the workout route, and heart-rate readings recorded during a workout — including those from a Bluetooth heart-rate monitor you connect to your iPhone.</li>
-                <li><strong>Read from Health (with your permission):</strong> heart rate, resting heart rate, date of birth, and running speed.</li>
-                <li><strong>Why:</strong> to record your run in the Health app, to measure heart rate during a run, and to suggest heart-rate zones and estimate calories. The App does not request or read any other Health data.</li>
-                <li><strong>Where it goes:</strong> HealthKit data is kept on your device and in your Health database. The App never uploads it to any server and does not store it in iCloud. How the Health app itself stores and syncs your data (for example, through iCloud) is managed by Apple and your own settings.</li>
-                <li><strong>How it is not used:</strong> HealthKit data is never used for advertising, marketing, or data mining, is never sold, and is never disclosed to advertisers, data brokers, or any other third party. It is not used to promote the subscription.</li>
-                <li><strong>Optional:</strong> if you deny read access, the App still works; heart-rate zones and calories that depend on that data are simply not filled in automatically. You can review or revoke access in the Health app (Sharing → Apps) or in Settings.</li>
-            </ul>
-
-            <h3>Location ("While Using the App" only)</h3>
-            <ul>
-                <li><strong>What:</strong> your position during an outdoor workout.</li>
-                <li><strong>Why:</strong> to calculate your pace and distance and to record your route. It keeps working with the screen off while a workout is active, and iOS shows its usual location indicator.</li>
-                <li><strong>Limits:</strong> the App never asks for "Always" location access and does not use location when no workout is running. Treadmill mode does not use location at all.</li>
-                <li><strong>Where it goes:</strong> stored with the workout on your device and, if Health access is granted, in the workout route in Health. It is not sent to us. Route and coordinates leave the device only when you export a GPX file or share an image yourself; the shared image does not include a map unless you switch it on; when it does, the route's first and last 300 m are left out and the map is blurred within about 300 m of the start and the finish.</li>
-            </ul>
-
-            <h3>Motion &amp; Fitness</h3>
-            <ul>
-                <li><strong>What:</strong> step count and cadence from the device's motion sensors.</li>
-                <li><strong>Why:</strong> to refine GPS pace, detect stopping and starting, and show a reference pace on the treadmill.</li>
-            </ul>
-
-            <h3>Bluetooth</h3>
-            <ul>
-                <li><strong>What:</strong> a connection to a Bluetooth heart-rate monitor you choose.</li>
-                <li><strong>Why:</strong> to read your heart rate during a run. The App does not scan for or connect to anything else and does not use Bluetooth for tracking.</li>
-            </ul>
-
-            <h3>Notifications</h3>
-            <ul>
-                <li><strong>What:</strong> local notifications scheduled on your device, for example a reminder before a free trial ends or when a workout has been paused for a long time. There are no push notifications and no marketing messages.</li>
-            </ul>
-
-            <h3>Voice Guidance</h3>
-            <ul>
-                <li>Spoken alerts are pre-made voice clips (AI-generated speech) bundled with the App and played on your device. No speech is generated or downloaded while you use the App. The App does not use the microphone or record audio.</li>
-            </ul>
+            <h2>1. Who We Are</h2>
+            <p>IntervalRunner is provided by JUKI, an individual developer in the Republic of Korea (business registration number 604-20-14584), who is responsible for the App and this policy. For the processing described in this policy, we are the controller of the messages and files you send us. For any privacy question or request, email <a href="mailto:support@setlog.net">support@setlog.net</a> or use the contact form in Section 20.</p>
         </div>
 
         <div class="section">
-            <h2>What We Do Not Collect</h2>
-
-            <p>IntervalRunner does not collect, store on any server, or share any of the following:</p>
+            <h2>2. Summary — What Goes Where</h2>
+            <h3>iPhone and Apple Watch</h3>
+            <p>The App processes your data on your device and does not send it to the developer. The only information we receive is what you choose to send us (support messages and diagnostics files, Sections 12 and 20) and anonymous crash and sales statistics from Apple. IntervalRunner for iPhone and Apple Watch does not collect, store on any server, or share any of the following:</p>
             <ul>
                 <li>Name, email address, phone number, or any other personal identifier — the App has no accounts or sign-in</li>
                 <li>Your health, fitness, or location data</li>
@@ -220,50 +184,342 @@
                 <li>Payment information — purchases are handled entirely by Apple</li>
                 <li>Analytics, usage statistics, or crash reports sent automatically</li>
             </ul>
-            <p>The App uses no third-party analytics, advertising, attribution, or crash-reporting SDKs, and it does not track you across other apps or websites.</p>
+            <p>It uses no third-party analytics, advertising, attribution, or crash-reporting SDKs, and it does not track you across other apps or websites.</p>
+
+            <h3>Android and Wear OS</h3>
+            <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Where it is processed</th>
+                        <th>Who receives it</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Workouts, run history, settings, heart rate, routes</td>
+                        <td>On your phone and watch</td>
+                        <td>No one through the App. Optionally Health Connect on your phone (Section 3), your own Android backup (Section 10), files you export (Section 11), and a diagnostics file you choose to send us (Section 12)</td>
+                    </tr>
+                    <tr>
+                        <td>Precise location during an outdoor run</td>
+                        <td>On your devices</td>
+                        <td>No one through the App. It is not sent to us, to the ad SDK, or to the map. Google's location services on your device may process location under your device settings (Section 4)</td>
+                    </tr>
+                    <tr>
+                        <td>Advertising ID, app set ID, IP address, ad interactions, ad SDK diagnostics</td>
+                        <td>Sent by the Google Mobile Ads SDK (Free version only)</td>
+                        <td>Google (Section 6)</td>
+                    </tr>
+                    <tr>
+                        <td>Map area shown on a run's map, IP address, device and SDK information</td>
+                        <td>Sent by the Google Maps SDK when a run's map is shown</td>
+                        <td>Google (Section 5)</td>
+                    </tr>
+                    <tr>
+                        <td>Purchases and subscription status</td>
+                        <td>Google Play</td>
+                        <td>Google (Section 7). We never see your payment details. Google Play gives us order information (such as order number, product, country, date, and amount), which we use only to handle refunds and support requests</td>
+                    </tr>
+                    <tr>
+                        <td>Diagnostics file, messages to us</td>
+                        <td>Only if you send them</td>
+                        <td>Us (Sections 12 and 20)</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
         </div>
 
         <div class="section">
-            <h2>Purchases (Subscriptions)</h2>
-
-            <p>IntervalRunner Pro is sold as an auto-renewing monthly or yearly subscription through the App Store. Purchases, free trials, billing, renewals, refunds, and Family Sharing are handled entirely by Apple using StoreKit. We never see or store your Apple Account details or payment information. The App reads your subscription status from Apple on your device to unlock Pro features and keeps a small cached copy of that status on the device so Pro also works offline (see Data Stored on Your Device). You can manage or cancel a subscription in Settings → your name → Subscriptions.</p>
-        </div>
-
-        <div class="section">
-            <h2>Data Stored on Your Device</h2>
-
-            <p>The following stay on your device and are never uploaded to any server:</p>
+            <h2>3. Health Data</h2>
+            <h3>iPhone and Apple Watch: HealthKit</h3>
             <ul>
-                <li>Your saved workouts, presets, and settings</li>
-                <li>Workout history: summaries, step-by-step results, heart-rate and pace samples, and routes</li>
-                <li>Local counters used to improve the App's design, such as how many times a screen was shown; they are never sent anywhere automatically (see Diagnostics below)</li>
-                <li>Engine traces of your recent workouts, used only for the diagnostics file: speeds, distances, heart rate, step states, and alert events, with positions only in a private coordinate frame (see Diagnostics below); and a temporary recovery point for a workout in progress</li>
-                <li>A cached copy of your subscription status: whether Pro is active, the kind of subscription (trial, monthly, or yearly), when it expires, and when it was last checked with Apple. It contains no payment or Apple Account details. It is kept in the App's own storage and in the iOS Keychain; iOS may keep Keychain items even after the App is uninstalled</li>
+                <li><strong>Written to Health (with your permission):</strong> workouts (outdoor or indoor running, including the interval segments), distance, active energy, the workout route, and heart-rate readings recorded during a workout — including those from a Bluetooth heart-rate monitor you connect to your iPhone.</li>
+                <li><strong>Read from Health (with your permission):</strong> heart rate, resting heart rate, date of birth, and running speed.</li>
+                <li><strong>Why:</strong> to record your run in the Health app, to measure heart rate during a run, and to suggest heart-rate zones and estimate calories. The App does not request or read any other Health data.</li>
+                <li><strong>Where it goes:</strong> HealthKit data is kept on your device and in your Health database. The App does not upload it to us or to any server of ours and does not store it in iCloud. Heart-rate readings from your workouts can be part of a diagnostics file only if you choose to export one and send it to us (Section 12). How the Health app itself stores and syncs your data (for example, through iCloud) is managed by Apple and your own settings.</li>
+                <li><strong>How it is not used:</strong> HealthKit data is never used for advertising, marketing, or data mining, is never sold, and is never disclosed to advertisers, data brokers, or any other third party. It is not used to promote the subscription.</li>
+                <li><strong>Optional:</strong> if you deny read access, the App still works; heart-rate zones and calories that depend on that data are simply not filled in automatically. You can review or revoke access in the Health app (Sharing → Apps) or in Settings.</li>
             </ul>
-            <p>If you use Apple Watch, the App exchanges workouts, settings, and live workout state between your iPhone and your own paired Watch using Apple's WatchConnectivity and HealthKit. This traffic goes directly between your devices. The App's widgets and Live Activities read a small amount of the same data (for example the current step and remaining time) on your device.</p>
+
+            <h3>Android and Wear OS: Health Connect</h3>
+            <p>Health Connect is Android's on-device store for health and fitness data. It is built into Android 14 and later; on Android 9 to 13 it is an app from Google Play. The App uses Health Connect only to keep a record of the runs you do with the App and to suggest heart-rate zones and calorie estimates. Running works without Health Connect.</p>
+
+            <p><strong>What the App writes (with your permission).</strong> When you finish a run, the App writes:</p>
+            <ul>
+                <li><strong>Exercise session:</strong> running or treadmill running, with the interval segments, pauses, and laps. The session title is the name you gave the run or the workout's name; other apps with access to your Health Connect data can see this title. Your personal notes are not written.</li>
+                <li><strong>Exercise route:</strong> the route of outdoor runs, only if you allow route access.</li>
+                <li><strong>Distance</strong> and <strong>active calories burned</strong>. For runs recorded on the phone alone, calories are estimated from distance and your body weight; if no weight is available, no calories are written.</li>
+                <li><strong>Heart rate</strong> measured during the run by your Wear OS watch or a Bluetooth heart-rate monitor.</li>
+            </ul>
+
+            <p><strong>What the App reads (with your permission):</strong></p>
+            <ul>
+                <li><strong>Weight</strong> — your latest weight, used only to estimate the active energy (calories) of the runs you save.</li>
+                <li><strong>Resting heart rate</strong> — your latest value, to suggest heart-rate zones.</li>
+            </ul>
+            <p>Nothing else is read. The App does not request access to your Health Connect history (so it only sees data from about 30 days before you first granted access onward) and does not read Health Connect data in the background. The App may read back the records it wrote itself, to avoid duplicates and to delete them when you ask. Health Connect does not provide your age; if you want age-based heart-rate zones, you can enter your birth year in the App instead (Section 4).</p>
+
+            <p><strong>How Health Connect data is used and not used:</strong></p>
+            <ul>
+                <li>It is stored on your device. The App does not send it to us or to any server of ours.</li>
+                <li>It is never used for advertising or marketing, and it is never passed to the ad SDK or any other third-party SDK.</li>
+                <li>It is never sold, and it is never given to data brokers, advertising platforms, insurers, lenders, or employers, or used for decisions about credit, insurance, or employment.</li>
+                <li>The App does not transfer Health Connect data to anyone. The run data the App keeps itself (including heart rate measured during runs) leaves your device only as described in Sections 9 to 12 — watch sync, your own backup, files you export, and a diagnostics file you choose to send us.</li>
+                <li>We have no access to your data in Health Connect.</li>
+            </ul>
+            <p><strong>The use of information received from Health Connect will adhere to the <a href="https://support.google.com/googleplay/android-developer/answer/12991134">Health Connect Permissions policy</a>, including the Limited Use requirements.</strong></p>
+
+            <p><strong>Your control:</strong></p>
+            <ul>
+                <li>Grant or revoke each permission at any time in Health Connect (in Android Settings on Android 14 and later, or in the Health Connect app on Android 13 and earlier). The App keeps working without it.</li>
+                <li>When you delete a run in the App, or delete all data, you can choose to also delete the records the App wrote to Health Connect. Only records the App created are deleted.</li>
+                <li>Records already written to Health Connect stay there after you uninstall the App, until you delete them in Health Connect.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Data the App Uses on Your Devices</h2>
+            <p>Everything in this section is processed on your phone or watch only. Each permission is requested when it is first needed, and you can change it at any time in your device's Settings; Settings › Data &amp; Privacy in the App shows their status.</p>
+
+            <h3>Location ("While Using the App" only)</h3>
+            <ul>
+                <li><strong>What:</strong> your position during an outdoor workout.</li>
+                <li><strong>Why:</strong> to calculate your pace and distance and to record your route.</li>
+                <li><strong>Limits:</strong> the App never asks for "Always" (background) location access and does not use location when no workout is running. Treadmill mode does not use location at all.</li>
+                <li><strong>iPhone and Apple Watch:</strong> location keeps working with the screen off while a workout is active, and iOS shows its usual location indicator. It is stored with the workout on your device and, if Health access is granted, in the workout route in Health. The App does not send it to us.</li>
+                <li><strong>Android and Wear OS:</strong> your precise position comes from Android's location services (on the phone, Google Play services' location provider; on a Wear OS watch, the watch's location services). While a run is active, the App runs a foreground service with an ongoing notification so tracking continues with the screen off. Your position is stored with the run on your device and, if you allow it, written to Health Connect as the exercise route. The App does not send it to us or give it to the ad SDK, and the map does not receive your position (Section 5). How Google's location services on your device handle location (for example, the "Google Location Accuracy" setting) is governed by Google and your device settings.</li>
+                <li>Routes and coordinates leave your device only when you export or share them yourself (Section 11).</li>
+            </ul>
+
+            <h3>Motion &amp; Fitness / Physical Activity</h3>
+            <ul>
+                <li><strong>What:</strong> step count and cadence from the device's motion sensors ("Motion &amp; Fitness" on iPhone, the "Physical activity" permission on Android).</li>
+                <li><strong>Why:</strong> to refine GPS pace, detect stopping and starting, and show a reference pace on the treadmill.</li>
+            </ul>
+
+            <h3>Bluetooth</h3>
+            <ul>
+                <li><strong>What:</strong> a connection to a Bluetooth heart-rate monitor you choose (on Android, the "Nearby devices" permission).</li>
+                <li><strong>Why:</strong> to read your heart rate during a run. The App looks only for heart-rate monitors, does not connect to anything else, and does not use Bluetooth for tracking or to determine your location.</li>
+            </ul>
+
+            <h3>Wear OS watch sensors (Android and Wear OS)</h3>
+            <ul>
+                <li>On a Wear OS watch, the App uses the watch's heart-rate sensor (body sensors / heart-rate permission), GPS, and motion sensors through Wear OS Health Services during a run, for the same purposes as above.</li>
+            </ul>
+
+            <h3>Information you enter (Android and Wear OS)</h3>
+            <ul>
+                <li>Workout names, run titles, notes, maximum and resting heart rate, heart-rate zones, and preferences you enter are stored on your device.</li>
+                <li><strong>Birth year (optional):</strong> if you want age-based heart-rate zones, you can enter your birth year in the App (Health Connect does not provide it; on iPhone, the App reads your date of birth from Health instead, Section 3). Only the year is stored, and the youngest age you can enter is 13. It is used only to compute your maximum heart rate and zones, and — if it shows you are under 18 — to turn ads off on that device (Section 6). It is stored only on this device, in storage that is excluded from Android backup and from device-to-device transfer. The App does not transmit it — not to us, to Google, to the ad SDK, or anywhere else — and does not include it in diagnostics files (a diagnostics file shows only whether ads are switched off because of age, never the year or your age). Delete All Data deletes it. After restoring a backup or moving to a new device, you enter it again if you want.</li>
+            </ul>
+
+            <h3>Notifications</h3>
+            <ul>
+                <li>Local notifications scheduled on your device, for example a reminder before a free trial ends or when a workout has been paused for a long time. There are no push notifications and no marketing messages.</li>
+                <li><strong>Android and Wear OS</strong> also show an ongoing notification while a run is active (required by Android for the foreground service) and a notice if an unfinished run can be recovered.</li>
+            </ul>
+
+            <h3>Voice guidance (AI-generated voice)</h3>
+            <ul>
+                <li>Spoken alerts are pre-made voice clips (AI-generated speech) bundled with the App and played on your device. No speech is generated or downloaded while you use the App. The voice is not the voice of a real person. The App does not use the microphone or record audio.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Route Maps</h2>
+            <h3>iPhone and Apple Watch: Apple Maps (MapKit)</h3>
+            <ul>
+                <li>The run detail screen shows your route on a map drawn with Apple's MapKit; a shared image includes a map only if you switch it on (Section 11).</li>
+                <li>The route line is drawn on your device and is not sent to us. To display the map, MapKit loads map images for the area being shown from Apple. Apple's handling of this is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+            </ul>
+
+            <h3>Android and Wear OS: Google Maps</h3>
+            <ul>
+                <li>The run detail screen shows your route on a map provided by the Google Maps SDK for Android.</li>
+                <li>The route line and start/finish dots are drawn on your device. The App does not send your route or coordinates to Google, and it does not enable the map's "my location" feature.</li>
+                <li>To show the map, the Google Maps SDK downloads map images (tiles) for the area being displayed from Google's servers. These requests reveal to Google the general area of the map you are viewing (around your route), together with your IP address. According to Google, the SDK also collects device information (such as OS version and model), SDK version, crash and diagnostic information, and a Maps-SDK-specific pseudonymous identifier, and may record map camera (pan/zoom) events. This happens whether you use Free or Pro.</li>
+                <li>The App does not start Google's map code when it launches; the Google Maps SDK is loaded and contacts Google only when a run's map is shown.</li>
+                <li>Use of the map is subject to the <a href="https://maps.google.com/help/terms_maps/">Google Maps/Google Earth Additional Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+                <li>Shared run images (Section 11) do not use Google map tiles.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Advertising</h2>
+            <h3>iPhone and Apple Watch: no ads</h3>
+            <p>The iPhone and Apple Watch app shows no ads, contains no advertising SDK, does not access the advertising identifier (IDFA), and does not track you across other apps or websites.</p>
+
+            <h3>Android and Wear OS: ads in the Free version</h3>
+            <p>The Free version shows ads so that everything you need to run can stay free. Ads are provided by <strong>Google AdMob</strong> (Google Mobile Ads SDK), and consent is managed with Google's <strong>User Messaging Platform (UMP)</strong>. Ads appear only on the Workouts (home) and History tabs (a banner), after you close a run summary (occasionally and limited in frequency — currently at most once a day — full screen), and when you choose to watch a video ad to unlock run analysis for 24 hours. Ads are never shown, loaded, or requested during a run.</p>
+
+            <p><strong>What the ad SDK collects (Google's disclosure):</strong></p>
+            <ul>
+                <li><strong>Device identifiers:</strong> the Android advertising ID and the app set ID.</li>
+                <li><strong>IP address</strong>, which may be used to estimate your general location.</li>
+                <li><strong>Interactions:</strong> app launches, ad views, taps, and video views.</li>
+                <li><strong>Diagnostics:</strong> performance information about the App and the SDK (such as launch time, hang rate, and energy use).</li>
+            </ul>
+            <p>This information is sent by the SDK directly to Google, encrypted in transit, and is used by Google for showing and measuring ads, analytics, and fraud prevention. We do not receive or store it. Google's use is described in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; Google's ad partners are listed at <a href="https://support.google.com/admob/answer/9012903">support.google.com/admob/answer/9012903</a>.</p>
+
+            <p><strong>What we never give the ad SDK:</strong></p>
+            <ul>
+                <li>No health, heart-rate, fitness, workout, or run data, and no location from the App's location permission. Ad requests contain no keywords, content, or targeting information. The ad module is built so it cannot access the App's health, workout, or location data: to keep ads out of runs and limit how often they appear, it is told only whether a run is in progress, that a run was completed and how long it was, and whether the user is under 18 (yes/no, never the age) — and it passes none of this to the ad SDK.</li>
+                <li>The App opts out of Android's Privacy Sandbox Topics and Attribution Reporting APIs (it removes their permissions), so the ad SDK cannot use them to derive interest topics from your use of the App.</li>
+                <li>Ad content is limited to a "Teen" maximum content rating, and ads play muted.</li>
+            </ul>
+
+            <p><strong>Consent and your choices, by region:</strong></p>
+            <ul>
+                <li><strong>EEA, UK, and Switzerland:</strong> before any ad is requested, Google's consent message (IAB TCF) asks whether you agree to personalized ads and related data use. If you do not consent, you get only limited, non-personalized ads or no ads, and every feature of the App still works. You can change your choice at any time in the App: Settings › Data &amp; Privacy › Ad privacy.</li>
+                <li><strong>United States:</strong> where US state privacy laws apply, you can opt out of the "sale" or "sharing" of personal information for targeted advertising in Settings › Data &amp; Privacy › Ad privacy (shown when required in your state).</li>
+                <li><strong>Republic of Korea:</strong> the advertising ID is used for ads as described above. You can refuse personalized (behavioral) advertising at any time by deleting or resetting the advertising ID or turning off ad personalization in Android Settings (see below).</li>
+                <li><strong>Everywhere:</strong> in Android Settings › Privacy › Ads (on some devices Settings › Google › Ads) you can reset or delete your advertising ID; after deleting it, apps receive no advertising ID. Settings › Data &amp; Privacy › Ad privacy in the App links there. You can also manage personalization at <a href="https://adssettings.google.com">adssettings.google.com</a>.</li>
+            </ul>
+            <p>The consent choice is stored on your device by Google's UMP SDK; the App does not keep its own copy. The consent choice and the ad SDK's other on-device data are excluded from Android backup and device-to-device transfer, so on a restored or new device you are asked again. Uninstalling the App or deleting its data does not delete information Google has already received; to make requests about that information, use the options in the Google Privacy Policy.</p>
+
+            <p><strong>Pro has no ads.</strong> While IntervalRunner Pro is active (including a free trial and Google Play's grace period), the App shows no ads and does not start the Google Mobile Ads SDK, so the SDK does not send ad requests from your device. If you upgrade while the App is open and the SDK was already started in that session, ads stop and are discarded immediately, and the SDK is not started from the next time the App starts. If Pro ends, ads return from the next time the App starts.</p>
+
+            <p><strong>Users under 18.</strong> If the birth year you enter (Section 4) shows you may be under 18 (because the App stores only the year, this includes the year in which you turn 18), the App shows no ads on that device and does not start the ad SDK or the consent form from then on (if the SDK was already started in that session, ads stop immediately and the SDK is not started from the next time the App starts). The ad module only learns "under 18: yes/no", never your age or birth year.</p>
+
+            <p><strong>On-device ad counters.</strong> To limit how often ads appear, the App keeps on your device the install time, the number of completed runs, when ads were last shown, and when a 24-hour analysis pass expires. These counters are not backed up and are never sent automatically; they are part of a diagnostics file only if you export one and choose to send it (Section 12).</p>
+        </div>
+
+        <div class="section">
+            <h2>7. Purchases (Subscriptions)</h2>
+            <h3>iPhone and Apple Watch: App Store</h3>
+            <p>IntervalRunner Pro is sold as an auto-renewing monthly or yearly subscription through the App Store. Purchases, free trials, billing, renewals, refunds, and Family Sharing are handled entirely by Apple using StoreKit. We never see or store your Apple Account details or payment information. The App reads your subscription status from Apple on your device to unlock Pro features and keeps a small cached copy of that status on the device so Pro also works offline (see Section 8). You can manage or cancel a subscription in Settings → your name → Subscriptions.</p>
+
+            <h3>Android and Wear OS: Google Play</h3>
+            <p>IntervalRunner Pro is an auto-renewing subscription sold through Google Play Billing. Purchases, free trials, billing, renewals, and refunds are handled by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and Google Play's terms. We never see your payment details. The App reads your purchases from Google Play on your device to unlock Pro and keeps a small copy of your subscription status on the device (whether Pro is active, which plan, when it ends, when it was last checked, and Google Play's purchase reference) so Pro also works offline. This copy is not included in cloud backups; after you restore or switch devices, the App re-reads your purchases from Google Play. See also our <a href="https://juki-j.github.io/privacy-policy/intervalrunner-terms-en.html">Terms of Use</a>.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Data Stored on Your Device</h2>
+            <p>The following stays on your device and is never uploaded to any server of ours:</p>
+            <ul>
+                <li>Your saved workouts, presets, alert profiles, and settings (on Android, also folders)</li>
+                <li>Workout history: summaries, step-by-step results, heart-rate and pace samples, and routes (on Android, also alert events, and per-second samples of pace, distance, heart rate, cadence, and GPS position for outdoor runs)</li>
+                <li>Local counters used to improve the App's design, such as how many times a screen was shown (on Android, also the ad counters in Section 6); they are never sent anywhere automatically (see Section 12)</li>
+                <li>Engine traces of your recent workouts, used only for the diagnostics file: speeds, distances, heart rate, step states, and alert events, with positions only in a private coordinate frame (Section 12); and a temporary recovery point for a workout in progress</li>
+                <li><strong>iPhone:</strong> a cached copy of your subscription status: whether Pro is active, the kind of subscription (trial, monthly, or yearly), when it expires, and when it was last checked with Apple. It contains no payment or Apple Account details. It is kept in the App's own storage and in the iOS Keychain; iOS may keep Keychain items even after the App is uninstalled</li>
+                <li><strong>Android:</strong> a size-limited log of recent app events, the cached subscription status (Section 7), and a random installation identifier used only to sync between your own phone and watch</li>
+            </ul>
+            <p><strong>iPhone and Apple Watch:</strong> the App's widgets and Live Activities read a small amount of the same data (for example the current step and remaining time) on your device.</p>
+            <p><strong>Android and Wear OS:</strong> the App's home-screen widgets, the ongoing run notification, and Wear OS tiles and complications show a small part of this data on your devices.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Watch Sync</h2>
+            <p><strong>Apple Watch:</strong> if you use Apple Watch, the App exchanges workouts, settings, and live workout state between your iPhone and your own paired Watch using Apple's WatchConnectivity and HealthKit. This traffic goes directly between your devices.</p>
+            <p><strong>Wear OS:</strong> if you use the Wear OS app, the phone and watch exchange workouts, settings, live run status, finished runs, and subscription status using Google Play services' Wearable Data Layer. This data goes only between your own phone and watch running IntervalRunner. When they are not connected directly over Bluetooth, Google Play services may relay it through Google's servers; Google states that data relayed this way is end-to-end encrypted. We do not receive it. Runs recorded on the watch are synced to the phone, and the phone writes them to Health Connect if you allow it.</p>
+        </div>
+
+        <div class="section">
+            <h2>10. Backups and Moving to a New Device</h2>
+            <h3>iPhone and Apple Watch</h3>
             <p>IntervalRunner does not use iCloud or CloudKit to sync data. As with other app data, these files may be included in the iCloud or computer backups you make of your device, which are governed by Apple's terms and your own backup settings.</p>
-        </div>
 
-        <div class="section">
-            <h2>Diagnostics (Only If You Choose)</h2>
-
-            <p>If something goes wrong, you can export a diagnostics file from Settings → Data &amp; Privacy. Nothing is sent automatically. The file is created on your device and leaves it only if you pick a destination in the share sheet (for example, emailing it to us).</p>
+            <h3>Android and Wear OS</h3>
             <ul>
-                <li><strong>What it contains:</strong> device model, iOS version, app version, language and region setting, time zone, Low Power Mode state, the status of each permission, audio output history (output types such as speaker or headphones, never device names), the local counters described above, and the engine traces of your most recent workouts on the iPhone, together with any traces your Watch has sent to it (speeds, distances, heart rate, step states, and alert events). A file exported from the App's hidden developer tools may also contain the App's own log lines from the last 24 hours, with coordinate-like text removed.</li>
-                <li><strong>What it does not contain:</strong> no latitude or longitude. Positions in traces are converted to a private coordinate frame with a random origin and rotation for each session, so they cannot be mapped to a real place, and any trace that contains coordinate fields is left out. No name, email, workout history, or Health data values other than the heart-rate figures in the traces.</li>
-                <li><strong>Crash reports:</strong> the App has no crash-reporting SDK. If you have chosen to share analytics with developers in iOS Settings, Apple may provide us with anonymous crash information through Xcode Organizer and App Store Connect; we do not receive anything that identifies you.</li>
+                <li><strong>Google cloud backup:</strong> if Android backup is turned on, Android's Auto Backup may save part of the App's data to your Google account: your saved workouts, folders, presets, alert profiles, and settings; app state such as the home layout, recent workouts, which notices you have seen, and the on-device usage counters (Section 8); and your run history summaries (times, distances, paces, heart-rate summaries, step results, and alert events). Google encrypts these backups, using your device's screen lock where available. This is governed by Google's terms and your backup settings; you can turn backup off in Android Settings.</li>
+                <li><strong>Excluded from cloud backup:</strong> your birth year, per-second samples including GPS routes, engine traces and diagnostics files, the App's log, run recovery data, the subscription status copy, the sync identifier, ad counters, and data stored on the device by Google's ad and consent SDKs (including your consent choice and the ad WebView's data). After restoring from a cloud backup, your runs and summaries are there, but their routes and charts are not.</li>
+                <li><strong>Device-to-device transfer:</strong> when you copy data directly from an old Android device to a new one (cable or local transfer, Android 12+), the App's run data including routes may also be copied; the birth year, subscription status, sync identifier, ad counters, and the ad and consent SDKs' data are not.</li>
+                <li>The Wear OS app does not use cloud backup; watch runs are backed up as part of the phone's data after they sync.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>Sharing and Third Parties</h2>
-
-            <p>We do not sell, rent, or share your data with any third parties, and the developer receives none of it. The only services involved are Apple's own: the App Store and StoreKit for purchases, and HealthKit and the Health app for the data you choose to record. Apple's handling of your data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. Files you export or share yourself (GPX, CSV, JSON, images) go wherever you send them.</p>
+            <h2>11. Exports and Sharing You Start</h2>
+            <p>Apart from watch sync (Section 9), your own backups (Section 10), and map images loaded for the area shown (Section 5), data leaves your device through the App only when you choose to export or share it: GPX route files, CSV or JSON exports of your history, workout files, and run images. Files you share go wherever you send them, under that destination's terms.</p>
+            <ul>
+                <li><strong>iPhone:</strong> the shared image does not include a map unless you switch it on; when it does, the route's first and last 300 m are left out and the map is blurred within about 300 m of the start and the finish.</li>
+                <li><strong>Android:</strong> the share image does not contain a map; when you include the route, its first and last 300 m are left out.</li>
+            </ul>
         </div>
 
         <div class="section">
-            <h2>Your Choices and Deleting Your Data</h2>
+            <h2>12. Diagnostics (Only If You Choose)</h2>
+            <p>If something goes wrong, you can export a diagnostics file from Settings › Data &amp; Privacy. Nothing is sent automatically. The file is created on your device and leaves it only if you pick a destination in the share sheet (for example, emailing it to us).</p>
+            <ul>
+                <li><strong>What it contains (iPhone):</strong> device model, iOS version, app version, language and region setting, time zone, Low Power Mode state, the status of each permission, audio output history (output types such as speaker or headphones, never device names), the local counters described above, and the engine traces of your most recent workouts on the iPhone, together with any traces your Watch has sent to it (speeds, distances, <strong>heart-rate readings</strong>, step states, and alert events). In the iPhone version the heart-rate readings are always part of these traces. A file exported from the App's hidden developer tools may also contain the App's own log lines from the last 24 hours, with coordinate-like text removed.</li>
+                <li><strong>What it contains (Android):</strong> device model, Android version, app version, language and region, time zone, battery saver state, the status of each permission, audio output types (such as speaker or headphones — never device names), the on-device counters described above, recent app exit reasons recorded by Android (with coordinate-like text removed), the ad module's state and recent ad events (whether ads are on or switched off and why — for example Pro or the age setting — the ad counters described in Section 6, and when an ad slot was shown, skipped, or failed; no advertising ID or other identifiers), and engine traces of your most recent runs on the phone together with traces your watch sent to it (speeds, distances, step states, alert events, and the workout's settings, including any heart-rate targets you set). <strong>Heart-rate readings are left out of the traces unless you switch on "Include heart rate" on the export screen</strong> (off by default; it applies only to that export). A file exported from the App's hidden developer tools may also contain the App's own log lines from the last 24 hours, with coordinate-like text removed.</li>
+                <li><strong>What it does not contain:</strong> no latitude or longitude. Positions in traces are converted to a private coordinate frame with a random origin and rotation for each session, so that real places are hard to identify, and any trace that contains latitude or longitude fields is left out. No name, email, advertising ID, user-chosen device names, workout history, or Health or Health Connect data values other than the heart-rate readings in the traces described above.</li>
+                <li><strong>Crash reports (iPhone and Apple Watch):</strong> the App has no crash-reporting SDK. If you have chosen to share analytics with developers in iOS Settings, Apple may provide us with anonymous crash information through Xcode Organizer and App Store Connect; we do not receive anything that identifies you.</li>
+                <li><strong>Crash reports (Android and Wear OS):</strong> the App has no crash-reporting or analytics SDK of its own. If you have chosen to share usage and diagnostics data with Google on your device, Google Play may provide us with anonymous crash and performance statistics (Android vitals); we cannot identify you from them.</li>
+            </ul>
+            <p><strong>Heart-rate readings are health information.</strong> A diagnostics file that contains them reaches us only if you choose to send it. By sending such a file, you consent to our using the heart-rate readings in it only to answer you and fix the problem. You can leave them out (on Android, keep "Include heart rate" off), and you can ask us at any time to delete a file you sent.</p>
+            <p>If you send us a diagnostics file or a message, we use it only to answer you and fix problems, and we delete it as described in Section 15.</p>
+        </div>
 
+        <div class="section">
+            <h2>13. Sharing and Third Parties</h2>
+            <p>We do not sell or rent your data, and we do not share data we hold with third parties. Files you export or share yourself (GPX, CSV, JSON, images) go wherever you send them.</p>
+            <p><strong>iPhone and Apple Watch:</strong> the App does not send your data to the developer and does not share it with third parties. The only services involved are Apple's own: the App Store and StoreKit for purchases, HealthKit and the Health app for the data you choose to record, and MapKit for maps. Apple's handling of your data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+            <p><strong>Android and Wear OS:</strong> the third-party services involved are all provided by Google, under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>:</p>
+            <ul>
+                <li><strong>Google AdMob and User Messaging Platform</strong> — ads and consent, Free version only (Section 6)</li>
+                <li><strong>Google Maps SDK</strong> — route maps (Section 5)</li>
+                <li><strong>Google Play Billing</strong> — purchases (Section 7)</li>
+                <li><strong>Google Play services</strong> — location, Wear OS Data Layer sync (Section 9), and Android backup (Section 10)</li>
+                <li><strong>Health Connect</strong> — on-device health data store you control (Section 3)</li>
+                <li><strong>Google Play In-App Review</strong> — if you choose to rate the App, the review is handled by Google Play</li>
+            </ul>
+            <p>Support messages you choose to send are received through <strong>Tally</strong> (Tally BV), which hosts our contact form on our behalf, and emails to support@setlog.net are received through <strong>Cloudflare Email Routing</strong> (Cloudflare, Inc.), which forwards them to the developer's mailbox. These providers process the messages only to deliver them to us. We may disclose information we hold (only support messages, files you sent us, and order information for refunds) if required by law.</p>
+        </div>
+
+        <div class="section">
+            <h2>14. Your Rights</h2>
+            <ul>
+                <li>Data on your devices is under your control: view and edit it in the App, delete it (Section 15), and manage permissions in your device's Settings (on iPhone, also the Health app; on Android, also Health Connect).</li>
+                <li><strong>Android and Wear OS:</strong> ad consent and opt-out are described in Section 6. For data that Google received through its SDKs, contact Google through the Google Privacy Policy.</li>
+                <li>Depending on where you live (for example under the GDPR, UK GDPR, US state laws, or Korea's Personal Information Protection Act), you may have the right to access, correct, delete, restrict, or object to processing of personal information, to withdraw consent, and to complain to your data protection authority. For data we hold (support messages and files you sent), contact us (Section 20) and we will respond without undue delay. We do not discriminate against you for exercising these rights.</li>
+            </ul>
+
+            <h3>Legal bases (EEA, UK, and Switzerland)</h3>
+            <p>Where the GDPR or the UK GDPR applies, we rely on the following legal bases. Data that stays on your devices is processed by the App under your control and is not received by us.</p>
+            <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Processing</th>
+                        <th>Data</th>
+                        <th>Legal basis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Answering support messages and fixing problems</td>
+                        <td>Your message, your reply email address (if given), and diagnostics files you send without heart-rate readings</td>
+                        <td>Our legitimate interest in answering you and fixing problems (Art. 6(1)(f)); for questions about your purchase, performance of the contract (Art. 6(1)(b))</td>
+                    </tr>
+                    <tr>
+                        <td>Heart-rate readings in a diagnostics file you choose to send us</td>
+                        <td>Heart-rate readings (health data)</td>
+                        <td>Your explicit consent (Art. 9(2)(a) and Art. 6(1)(a)), given by choosing to send the file. You can withdraw it at any time by asking us to delete the file; this does not affect processing before withdrawal</td>
+                    </tr>
+                    <tr>
+                        <td>Ads in the Android Free version</td>
+                        <td>Advertising ID, app set ID, IP address, ad interactions, ad SDK diagnostics (sent by the SDK to Google, Section 6)</td>
+                        <td>Your consent, collected through Google's consent message (Art. 6(1)(a) and, for storing and reading information on your device, the ePrivacy rules). You can withdraw it in Settings › Data &amp; Privacy › Ad privacy. Google is responsible for its own further processing under its policies</td>
+                    </tr>
+                    <tr>
+                        <td>Purchases, refunds, and related records</td>
+                        <td>Subscription status on your device; order information from Google Play; messages about payments or refunds</td>
+                        <td>Performance of the contract (Art. 6(1)(b)); keeping records of payment and refund disputes where Korean e-commerce law requires it (legal obligation, Art. 6(1)(c))</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <p><strong>Transfers:</strong> we are in the Republic of Korea, which the European Commission and the United Kingdom have recognised as providing an adequate level of data protection.</p>
+        </div>
+
+        <div class="section">
+            <h2>15. Retention and Deletion</h2>
+            <h3>iPhone and Apple Watch</h3>
             <ul>
                 <li><strong>Permissions:</strong> you can review or change Location, Health, Motion &amp; Fitness, Notifications, and Bluetooth at any time in the iOS Settings app; Settings → Data &amp; Privacy in the App shows their current status and links there.</li>
                 <li><strong>Delete a workout or run:</strong> from the history screens in the App.</li>
@@ -271,26 +527,54 @@
                 <li><strong>Uninstall:</strong> removing the App removes its data from that device, except the cached subscription status in the iOS Keychain, which iOS may keep and which the App reuses if you install it again (use Delete All Data before uninstalling to clear it). Workouts already saved to Health stay in Health until you delete them there.</li>
                 <li><strong>Subscription:</strong> the subscription itself is managed by Apple; the App keeps only the cached status described above.</li>
             </ul>
+
+            <h3>Android and Wear OS</h3>
+            <ul>
+                <li><strong>Delete a run:</strong> from the history screens, optionally also deleting its Health Connect records.</li>
+                <li><strong>Delete all data:</strong> Settings › Data &amp; Privacy › Delete All Data removes the App's workouts, history, samples, settings, birth year, alert profiles, traces, logs, diagnostics files, temporary export files, and widget data on the phone, and compacts the database so deleted entries are not left behind. It tells your watch to do the same the next time the watch app runs. An option in the same dialog also deletes the records the App wrote to Health Connect (only those). The subscription status copy and the sync identifier are kept, so an active subscription stays active.</li>
+                <li><strong>Uninstall:</strong> removes all of the App's data from that device. Records in Health Connect stay until you delete them there. A copy in your Google backup is managed by Google and your backup settings.</li>
+                <li><strong>Data held by Google</strong> (ads, maps, purchases) is retained under Google's policies.</li>
+            </ul>
+
+            <h3>Messages you send us (all versions)</h3>
+            <ul>
+                <li><strong>Support messages and diagnostics files you send us</strong> are deleted within 90 days after your inquiry is resolved.</li>
+                <li><strong>Messages about payments, refunds, withdrawal of purchase, or disputes</strong> (and order information we used to handle them) are kept for 3 years as records of consumer complaints and dispute handling, as required by Korea's Act on the Consumer Protection in Electronic Commerce, and then deleted.</li>
+                <li>When a retention period ends, we delete the contact-form entry together with the email and any attachments.</li>
+            </ul>
         </div>
 
         <div class="section">
-            <h2>Children's Privacy</h2>
-
-            <p>IntervalRunner does not knowingly collect information from children under 13. Because the App collects no personal information, there is nothing to collect from anyone.</p>
+            <h2>16. Children</h2>
+            <p><strong>iPhone and Apple Watch:</strong> IntervalRunner does not knowingly collect information from children under 13. The App does not collect personal information through the App; if a child sends us a message, the paragraph below applies.</p>
+            <p><strong>Android and Wear OS:</strong> IntervalRunner for Android is intended for adults (18 and over) and is not directed to children. The App has no accounts and does not verify age. Its only age-related input is the optional birth year for heart-rate zones (Section 4): it never leaves your device, an age under 13 cannot be entered, and if it shows you are under 18 the App shows no ads on that device (Section 6). We do not knowingly collect personal information from children.</p>
+            <p>If you believe a child has sent us personal information, contact us and we will delete it.</p>
         </div>
 
         <div class="section">
-            <h2>Changes to This Policy</h2>
-
-            <p>If we make material changes, we will update the Effective Date above. Significant changes will also be noted in the App Store release notes.</p>
+            <h2>17. International Transfers</h2>
+            <p>The App's own data stays on your devices. On Android and Wear OS, information collected by Google's SDKs and services is processed by Google LLC and its affiliates, including in the United States, under Google's safeguards. Support messages are received through Tally (Tally BV, Belgium, EU), and emails to support@setlog.net pass through Cloudflare Email Routing (Cloudflare, Inc., United States) on their way to the developer's mailbox. We are in the Republic of Korea, which the European Commission and the United Kingdom have recognised as providing an adequate level of data protection.</p>
         </div>
 
         <div class="section">
-            <h2>Contact</h2>
+            <h2>18. Security</h2>
+            <p>The App stores its data in the app's private storage on your device. Diagnostics files remove real coordinates before export. On Android and Wear OS, network communication by the Google SDKs is encrypted (TLS), and the ad module has no access to health, workout, or location data; it learns only whether a run is in progress or was completed (and its length) for frequency limits, and passes nothing about your runs to the ad SDK.</p>
+        </div>
 
+        <div class="section">
+            <h2>19. Changes to This Policy</h2>
+            <p>If we change this policy, we will update the Effective Date above and publish the new version on this page. Significant changes will also be noted in the App Store or Google Play release notes, and if a change adds new data processing, we will update this policy before releasing the feature.</p>
+            <p>Previous version: September 30, 2026 (iPhone and Apple Watch only).</p>
+        </div>
+
+        <div class="section">
+            <h2>20. Contact</h2>
             <p>For any privacy-related questions or requests:</p>
             <div class="contact-info">
-                <p>https://tally.so/r/nrxJXo</p>
+                <p><strong>Developer and contact for personal information:</strong> JUKI (individual developer, Republic of Korea)</p>
+                <p><strong>Email:</strong> <a href="mailto:support@setlog.net">support@setlog.net</a></p>
+                <p><strong>Contact form:</strong> <a href="https://tally.so/r/nrxJXo">https://tally.so/r/nrxJXo</a></p>
+                <p><strong>Business registration number (Korea):</strong> 604-20-14584</p>
             </div>
         </div>
     </div>
