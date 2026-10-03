@@ -146,26 +146,52 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="en">
         <div class="lang-switch">
             <a href="https://juki-j.github.io/privacy-policy/runvue-kr.html">한국어</a>
             <a href="#en">English</a>
         </div>
 
         <h1>RunVue Privacy Policy</h1>
-        <p class="update-date">Effective Date: October 1, 2026 · Last updated: October 2, 2026</p>
+        <p class="update-date">Effective Date: October 1, 2026 · Last updated: October 3, 2026</p>
 
         <p>RunVue ("the App", "we", "our") is developed and operated by the developer reachable at setlog.net</p>
-        <p>RunVue turns your runs, recorded in Apple's Health app, into 3D replay videos entirely on your device. The App has no user accounts, no advertising, and no analytics or tracking SDKs. This Privacy Policy explains what the App accesses on your device, how it is used, and your rights regarding that information.</p>
+        <p>RunVue turns your runs into 3D replay videos entirely on your device. This policy covers both versions of the App: the <strong>iPhone app</strong>, which reads your runs from Apple's Health app, and the <strong>Android app</strong>, which reads them from Health Connect. Neither version has user accounts, and neither uses analytics or tracking SDKs of its own. <strong>The iPhone app has no advertising. The Android app shows ads from Google AdMob to free users</strong>; RunVue Pro subscribers on Android see no ads. Where the two versions differ, this policy says so — see <a href="#iphone">iPhone app</a> and <a href="#android">Android app</a>. This Privacy Policy explains what the App accesses on your device, how it is used, and your rights regarding that information.</p>
 
         <div class="highlight">
-            <p><strong>In short:</strong> the developer does not collect your data. Your health and route data are processed entirely on your device and never sent to any server. The only thing the App downloads from our server is the map tiles needed to build a video, and that request contains only a map tile number (a grid cell roughly tens of kilometers wide) — no route, coordinates, device identifier, or account information. Our hosting provider, Cloudflare, may process your IP address when you make that request. Your data is never sold, never shared with third parties, and never used for advertising.</p>
+            <p><strong>In short:</strong> the developer does not collect your health or route data. Your health and route data are processed entirely on your device and never sent to any server — including the ad SDK on Android. The only thing the App downloads from our server is the map data needed to build a video, and that request contains only the name of a map grid file covering a large area (or a country code for place names) — no route, coordinates, device identifier, or account information. Our hosting provider, Cloudflare, may process your IP address when you make that request. <strong>On Android only</strong>, the free version shows ads: Google AdMob receives your device's advertising ID, your IP address, how you interact with ads, and diagnostic information from its SDK, and where the law requires it you are asked for consent first. Your health data is never sold, never shared with third parties, and never used for advertising.</p>
         </div>
 
         <div class="section">
-            <h2>Data the App Uses</h2>
+            <h2>Data Both Versions Handle the Same Way</h2>
+            <ul>
+                <li><strong>No location permission:</strong> RunVue never asks for location access on either platform. It reads your route only from the workout route already recorded in Apple Health or Health Connect.</li>
+                <li><strong>Read-only health access:</strong> the App never writes anything to Apple Health or Health Connect, and it does not read your body weight, date of birth, or age.</li>
+                <li><strong>Map downloads:</strong> described under "Map Data Downloads" below.</li>
+                <li><strong>Sharing:</strong> videos leave your device only when you save or share them yourself (see "Sharing").</li>
+            </ul>
+        </div>
 
-            <p>Everything below is processed on your device only. Each permission is requested when it is first needed, and you can change it at any time in Settings. <strong>RunVue never asks for location access</strong> — it reads your route only from the workout route already recorded in the Health app.</p>
+        <div class="section">
+            <h2>Map Data Downloads (both versions, unrelated to location permission)</h2>
+            <ul>
+                <li><strong>Purpose:</strong> the App downloads the map data needed to build a replay video from our static storage (Cloudflare R2, at <code>tiles.runvue.setlog.net</code>).</li>
+                <li><strong>What's in the request:</strong> on iPhone, only a map tile number (a grid cell roughly tens of kilometers wide). On Android, the App downloads whole files: a world index file, map grid files whose name identifies a large grid cell (on the order of 100 km across), and a place-name file whose name contains a country code. Your route, coordinates, device identifier, and account information are never included, and no cookies are used. On Android the request headers are fixed (for example, the language header is always English), so they do not reveal your language settings.</li>
+                <li><strong>Request logs:</strong> we do not retain request logs. However, due to how internet communication works, our hosting provider (Cloudflare) may technically process communication records such as IP addresses; this is governed by <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</li>
+                <li><strong>On-device cache:</strong> downloaded map data and place-name files are cached on your device and can be deleted at any time in Settings.</li>
+            </ul>
+            <!-- [법무 확인] The Android grid file name reveals a coarse area (zoom-8 cell). We describe it factually; confirm it does not need to be treated as "location information" under Korea's Location Information Act. -->
+        </div>
+
+        <!-- ===================== iPhone ===================== -->
+        <div class="section" id="iphone">
+            <div class="highlight">
+                <p><strong>iPhone app.</strong> The sections that start with "iPhone:" apply only to the iPhone app. The Android app is described in the sections that start with "Android:".</p>
+            </div>
+
+            <h2>iPhone: Data the App Uses</h2>
+
+            <p>Everything below is processed on your device only. Each permission is requested when it is first needed, and you can change it at any time in Settings.</p>
 
             <h3>Health Data (HealthKit, Read-Only)</h3>
             <ul>
@@ -176,14 +202,6 @@
                 <li><strong>Temporary use during rendering:</strong> heart-rate and calorie values are written to a temporary file on your device only while a video is being rendered, and are deleted immediately afterward.</li>
                 <li><strong>How it is not used:</strong> Health data is never used for advertising, marketing, or data mining, is never sold, and is never disclosed to advertisers, data brokers, or any other third party.</li>
                 <li><strong>Note:</strong> heart rate, average BPM, date and time, and (if you allow reading it) calories are rendered onto the video's on-screen display (HUD), so sharing the video shares those figures too. See "Sharing" below.</li>
-            </ul>
-
-            <h3>Map Tile Downloads (unrelated to location permission)</h3>
-            <ul>
-                <li><strong>Purpose:</strong> the App downloads the map tiles needed to build a replay video from our static storage (Cloudflare R2, at <code>tiles.runvue.setlog.net</code>).</li>
-                <li><strong>What's in the request:</strong> only a map tile number. Your route, coordinates, device identifier, and account information are never included.</li>
-                <li><strong>Request logs:</strong> we do not retain request logs. However, due to how internet communication works, our hosting provider (Cloudflare) may technically process communication records such as IP addresses; this is governed by <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</li>
-                <li><strong>On-device cache:</strong> downloaded map tiles and place-name files are cached on your device (up to 500MB) and can be deleted at any time in Settings.</li>
             </ul>
 
             <h3>Photos (Add-Only)</h3>
@@ -202,31 +220,19 @@
             <ul>
                 <li>GPX/FIT/zip files you choose are read on your device and converted into a run record. The original file is not kept once parsing finishes.</li>
             </ul>
+
+            <h3>No Advertising or Tracking</h3>
+            <p>The iPhone app has no advertising. It does not use advertising identifiers (IDFA) or any third-party analytics, advertising, attribution, or crash-reporting SDKs, and it does not track you across other apps or websites.</p>
         </div>
 
         <div class="section">
-            <h2>What We Do Not Collect</h2>
-
-            <p>RunVue does not collect, store on any server, or share any of the following:</p>
-            <ul>
-                <li>Name, email address, phone number, or any other personal identifier — the App has no accounts or sign-in</li>
-                <li>Your route or coordinates — not even in the map tile requests</li>
-                <li>Contacts, existing photos in your library, or browsing history</li>
-                <li>Advertising identifiers (IDFA) or cross-app tracking data</li>
-                <li>Payment information — purchases are handled entirely by Apple</li>
-                <li>Analytics, usage statistics, or crash reports sent automatically</li>
-            </ul>
-            <p>The App uses no third-party analytics, advertising, attribution, or crash-reporting SDKs, and it does not track you across other apps or websites.</p>
-        </div>
-
-        <div class="section">
-            <h2>Purchases (Subscriptions)</h2>
+            <h2>iPhone: Purchases (Subscriptions)</h2>
 
             <p>RunVue Pro is sold as an auto-renewing monthly or yearly subscription through the App Store (unlocks every playback speed from 2x to 60x, the Cinematic and Calm camera presets, and camera height and zoom). Videos at 1x and Summary speed, the Nav camera, and the pace and heart-rate waveform are free with no limit on how many you make. The small RunVue watermark appears in every video, free or Pro. Purchases, free trials, billing, renewals, refunds, and Family Sharing are handled entirely by Apple using StoreKit. We never see or store your Apple Account details or payment information. The App checks the purchase (transaction) information that Apple keeps on your device through StoreKit to unlock Pro features; it does not make its own copy of your subscription status or send it to any server. You can manage or cancel a subscription in Settings → your name → Subscriptions.</p>
         </div>
 
         <div class="section">
-            <h2>Data Stored on Your Device</h2>
+            <h2>iPhone: Data Stored on Your Device</h2>
 
             <p>The following stay on your device and are never uploaded to any server:</p>
             <ul>
@@ -239,26 +245,14 @@
         </div>
 
         <div class="section">
-            <h2>Diagnostics (Only If You Choose)</h2>
+            <h2>iPhone: Diagnostics (Only If You Choose)</h2>
 
             <p>If something goes wrong, you can export a diagnostics file from Settings → Advanced → Diagnostic Log. Nothing is sent automatically. The file is created on your device and leaves it only if you pick a destination in the share sheet. The diagnostics file contains things like device model, iOS version, app version, per-step processing times, and error codes; <strong>it never contains coordinates, place names, or any value that could identify a location such as a home address</strong>.</p>
             <p>MetricKit records only diagnostic counts on your device and does not transmit them automatically. The App has no separate crash-reporting SDK.</p>
         </div>
 
         <div class="section">
-            <h2>Sharing</h2>
-
-            <p>A video you choose to share yourself goes wherever you send it (Photos, Messages, another app, and so on). Because a video shows your entire route from start to finish, <strong>a one-time notice appears before your first save or share</strong> ("The video shows your full route, including start and finish. If you started near home, this could reveal your location."). This notice is shown only once.</p>
-        </div>
-
-        <div class="section">
-            <h2>Sharing and Third Parties</h2>
-
-            <p>We do not sell, rent, or share your data with any third parties, and the developer receives none of it. The only services involved are: Apple's App Store and StoreKit for purchases, HealthKit and the Health app for the data you choose to let the App read, and Cloudflare, which hosts our static map tile storage. Apple's handling of your data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>, and Cloudflare's by the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>. Map data is sourced from © OpenStreetMap contributors and the Overture Maps Foundation (ODbL).</p>
-        </div>
-
-        <div class="section">
-            <h2>Your Choices and Deleting Your Data</h2>
+            <h2>iPhone: Your Choices and Deleting Your Data</h2>
 
             <ul>
                 <li><strong>Permissions:</strong> you can review or change Health, Notifications, and Photos (add-only) access at any time in the iOS Settings app.</li>
@@ -269,26 +263,253 @@
             </ul>
         </div>
 
+        <!-- ===================== Android ===================== -->
+        <div class="section" id="android">
+            <div class="highlight">
+                <p><strong>Android app.</strong> The sections that start with "Android:" apply only to the Android app (Android 9 and later). The App's <a href="https://juki-j.github.io/privacy-policy/runvue-android-terms-en.html">Terms of Use for Android</a> also apply.</p>
+            </div>
+
+            <h2>Android: Summary — What Goes Where</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Where it is processed</th>
+                        <th>Who receives it</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Workouts, routes, heart rate, speed, distance, calories from Health Connect</td>
+                        <td>On your device only</td>
+                        <td>No one — not us, not the ad SDK</td>
+                    </tr>
+                    <tr>
+                        <td>Name of a map grid file or a country place-name file, IP address</td>
+                        <td>Sent when map data is downloaded</td>
+                        <td>Our storage host, Cloudflare (no logs kept by us)</td>
+                    </tr>
+                    <tr>
+                        <td>Advertising ID, app set ID, IP address, ad interactions, ad SDK diagnostics</td>
+                        <td>Sent by the Google Mobile Ads SDK (free version only)</td>
+                        <td>Google (see "Android: Advertising")</td>
+                    </tr>
+                    <tr>
+                        <td>Purchases and subscription status</td>
+                        <td>Google Play</td>
+                        <td>Google. We never see your payment details</td>
+                    </tr>
+                    <tr>
+                        <td>Diagnostic log, emails or contact-form messages</td>
+                        <td>Only if you send them</td>
+                        <td>Us (and Tally for the contact form)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Android: Health Connect</h2>
+
+            <p>Health Connect is Android's on-device store for health and fitness data (built into Android 14 and later; on Android 9 to 13 it is an app from Google Play). RunVue reads your runs from Health Connect to turn them into replay videos. It only reads; <strong>it never writes, changes, or deletes anything in Health Connect</strong>, and it does not read Health Connect data in the background.</p>
+
+            <h3>What the App reads (with your permission)</h3>
+            <ul>
+                <li><strong>Exercise sessions</strong> — to list your runs (start and end time, time zone, type).</li>
+                <li><strong>Exercise routes</strong> — the GPS route of a run, which is what the replay video follows. Android asks you separately for route access: you can allow a single run's route or choose to always allow routes. Without route access, that run cannot be turned into a video.</li>
+                <li><strong>Heart rate</strong>, <strong>speed</strong>, and <strong>distance</strong> — shown in the video's on-screen display and used to pace the replay.</li>
+                <li><strong>Active calories burned (optional)</strong> — if a measured value exists it is shown in the video; otherwise the App shows an estimate marked with "~", computed from the distance and a fixed standard body weight (70 kg) that is the same for every user.</li>
+                <li><strong>Health data history (optional)</strong> — lets the App see runs older than 30 days. Without it, Health Connect only gives the App data from about 30 days before you first granted access onward.</li>
+            </ul>
+            <p>The App does not read body weight, date of birth, or age (heart-rate zone colors use a fixed reference of 190 bpm for everyone), and it requests no other Health Connect data.</p>
+
+            <h3>What is copied to your device, and what is not</h3>
+            <ul>
+                <li><strong>Kept in the App's database on your device:</strong> each run's start and end time, time zone, distance, duration, and whether it was indoors; its source (the Health Connect record ID and the name of the app that recorded it); and the route.</li>
+                <li><strong>Not stored:</strong> heart rate, speed, and calories. They are read from Health Connect into memory each time you preview or save a video, and are not saved in the App's database.</li>
+            </ul>
+
+            <h3>How Health Connect data is used and not used</h3>
+            <ul>
+                <li>It stays on your device. It is never sent to us or to any server.</li>
+                <li><strong>It is never used for advertising or marketing, and it is never passed to the ad SDK (Google AdMob) or any other third-party SDK.</strong> Ad requests contain no route, location, or health information.</li>
+                <li>It is never sold, and it is never given to data brokers, advertising platforms, insurers, lenders, or employers, or used for decisions about credit, insurance, or employment.</li>
+                <li>It leaves your device only inside a video you choose to save or share (see "Sharing").</li>
+                <li>No person reads it. We have no access to it.</li>
+            </ul>
+            <p><strong>The use of information received from Health Connect will adhere to the <a href="https://support.google.com/googleplay/android-developer/answer/12991134">Health Connect Permissions policy</a>, including the Limited Use requirements.</strong></p>
+
+            <h3>Your control</h3>
+            <ul>
+                <li>Grant or revoke each permission at any time in Health Connect (in Android Settings on Android 14 and later, or in the Health Connect app on Android 13 and earlier).</li>
+                <li>If you revoke access, runs already imported stay in the App until you delete them (see "Android: Deleting Your Data").</li>
+                <li>Deleting data in the App never deletes the originals in Health Connect.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Android: Other Data the App Uses on Your Device</h2>
+            <ul>
+                <li><strong>Saving to your gallery:</strong> finished videos are saved to <code>Movies/RunVue</code> and images to <code>Pictures/RunVue</code> through Android's media store. The App does not read your existing photos or videos (it requests no storage-read permission; on Android 9 only, it uses the storage-write permission to save). The files it saves contain no location metadata (no GPS EXIF).</li>
+                <li><strong>Notifications:</strong> on Android 13 and later the App asks for notification permission. Notifications are local only — that a video is ready, or that making a video was interrupted. They never include your route or health values. There are no push notifications and no marketing messages.</li>
+                <li><strong>File import:</strong> GPX/FIT/zip files you choose with Android's file picker are read on your device. The temporary copy is deleted after import; the App keeps the run's route plus the file's display name and a fingerprint (SHA-256 hash) to avoid importing the same file twice.</li>
+                <li><strong>Network state:</strong> the App checks whether you are online or on a cellular connection, for example to warn before a large download over cellular.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Android: Advertising (Free Version)</h2>
+
+            <p>The free Android version shows ads so that making videos at 1x and Summary speed can stay free. Ads are provided by <strong>Google AdMob</strong> (Google Mobile Ads SDK), and consent is managed with Google's <strong>User Messaging Platform (UMP)</strong>.</p>
+
+            <h3>Where and when ads appear</h3>
+            <ul>
+                <li>A banner at the bottom of the Runs and Library tabs.</li>
+                <li>A full-screen ad, occasionally, when you leave the final preview after saving — at most once a day, at least 6 hours apart, and only after every second save.</li>
+                <li>An optional video ad you can choose to watch to use a Pro speed for one save — at most 3 times a day.</li>
+                <li><strong>No ads:</strong> during the first 24 hours after installation, before you have made your first video, for RunVue Pro subscribers, and never during onboarding, the Health Connect permission steps, Settings, the subscription screen, video generation, playback, or sharing.</li>
+            </ul>
+
+            <h3>What the ad SDK collects (Google's disclosure)</h3>
+            <ul>
+                <li><strong>Device identifiers:</strong> the Android advertising ID and the app set ID.</li>
+                <li><strong>IP address</strong>, which may be used to estimate your general location.</li>
+                <li><strong>Interactions:</strong> app launches, ad views, taps, and video views.</li>
+                <li><strong>Diagnostics:</strong> performance information about the App and the SDK.</li>
+            </ul>
+            <p>This information is sent by the SDK directly to Google, encrypted in transit, and is used by Google to show and measure ads, for analytics, and to prevent fraud. We do not receive or store it. Google's use is described in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; Google's ad technology partners are listed at <a href="https://support.google.com/admob/answer/9012903">support.google.com/admob/answer/9012903</a>.</p>
+            <!-- [확인 필요] Item list follows Google's "Google Mobile Ads SDK — Play data disclosure" page. Re-check against the shipped SDK versions (play-services-ads 25.5.0, UMP 4.0.0) before publication. -->
+
+            <h3>What we never give the ad SDK</h3>
+            <ul>
+                <li>No health, heart-rate, workout, route, or location data. Ad requests contain no keywords, content URLs, extra targeting data, or location.</li>
+                <li>The App removes the permissions for Android's Privacy Sandbox Topics and Attribution Reporting APIs, so the ad SDK cannot use them to derive interest topics from your use of the App.</li>
+                <li>Ad content is limited to a maximum content rating of "Teen" (T).</li>
+            </ul>
+
+            <h3>Consent and your choices, by region</h3>
+            <ul>
+                <li><strong>EEA, UK, and Switzerland:</strong> before ads are requested, Google's consent message asks whether you agree to personalized ads and related data use; it includes a "Do not consent" option. If you do not consent, you get only limited, non-personalized ads or no ads, and every feature of the App still works.</li>
+                <li><strong>United States:</strong> where US state privacy laws apply, a "Do not sell or share my personal information" option lets you opt out of the use of your information for targeted advertising.</li>
+                <li><strong>Republic of Korea and elsewhere:</strong> you can refuse personalized (behavioral) advertising at any time by deleting or resetting your advertising ID, as described below.</li>
+                <li><strong>In the App:</strong> Settings › About › Ad privacy lets you change your privacy choices (shown when your region requires it), open Android's ad ID settings, and open this policy.</li>
+                <li><strong>In Android:</strong> in Android Settings › Privacy › Ads (on some devices Settings › Google › Ads) you can reset or delete your advertising ID; after deleting it, apps receive no advertising ID. You can also manage ad personalization at <a href="https://adssettings.google.com">adssettings.google.com</a>.</li>
+            </ul>
+            <p>Your consent choice is stored on your device by Google's UMP SDK. Uninstalling the App or deleting its data does not delete information Google has already received; to make requests about that information, use the options in the Google Privacy Policy.</p>
+
+            <h3>Pro has no ads</h3>
+            <p>While RunVue Pro is active, the App shows no ads and does not even start the Google Mobile Ads SDK, so no ad requests are sent from your device.</p>
+
+            <h3>On-device ad counters</h3>
+            <p>To limit how often ads appear, the App keeps on your device when ads were last shown and how many were shown that day. These counters are stored in storage that is excluded from backup and are never sent anywhere.</p>
+        </div>
+
+        <div class="section">
+            <h2>Android: Purchases (Google Play)</h2>
+            <p>RunVue Pro on Android is an auto-renewing monthly or yearly subscription sold through Google Play Billing, with a one-month free trial for eligible users. It unlocks every playback speed from 2x to 60x, the Cinematic and Calm camera presets, camera height and zoom, and removes ads. Purchases, free trials, billing, renewals, and refunds are handled by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and Google Play's terms. <strong>We never see or store your payment information.</strong></p>
+            <p>The App has no server for purchases: it checks your purchase on your device using Google Play's signature. So that Pro keeps working offline for up to 7 days, it keeps a small copy on your device — the plan, when the current period ends, whether it auto-renews, and a hashed (not readable) form of Google Play's purchase token. This copy is excluded from backup and is never sent to us. You can manage or cancel your subscription in Google Play › Payments &amp; subscriptions › Subscriptions, or from the App via Settings › RunVue Pro › Manage subscription on Google Play.</p>
+        </div>
+
+        <div class="section">
+            <h2>Android: Backup and Moving to a New Device</h2>
+            <ul>
+                <li><strong>What may be backed up:</strong> if Android backup is turned on, only the App's preferences (such as units, the on-screen display language, and which notices you have already seen) may be saved to your Google account by Android's backup service, or copied when you move to a new device.</li>
+                <li><strong>Never backed up or transferred:</strong> the App's database (your imported runs and routes), library videos, map cache, the subscription copy, and the ad counters. After restoring or moving to a new device, the App imports your runs from Health Connect again.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Android: Diagnostics and Contact (Only If You Choose)</h2>
+            <ul>
+                <li><strong>Diagnostic log:</strong> Settings › Advanced › Export Diagnostic Log creates a file on your device containing the app version and build, Android version and API level, language setting, a log of events recorded only as numbers and codes (for example, processing times and error codes), and ad diagnostic counters. It contains no routes, coordinates, place names, or health values. It leaves your device only if you pick a destination in Android's share sheet, and nothing is sent automatically.</li>
+                <li><strong>Email:</strong> the Contact button opens your email app with a message to support@setlog.net that includes the app version and your device model, which you can edit or delete before sending.</li>
+                <li><strong>No crash reporting or analytics SDK:</strong> the Android app uses no Firebase, Crashlytics, or analytics SDK. If you have chosen to share usage and diagnostics data with Google on your device, Google Play may provide us with aggregated crash and performance statistics (Android vitals) from which we cannot identify you.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Android: Deleting Your Data</h2>
+            <ul>
+                <li><strong>Delete Health runs:</strong> Settings › Advanced › Delete Health Runs removes RunVue's copies of runs imported from Health Connect and stops them from being imported again. The originals in Health Connect and videos you made are not affected.</li>
+                <li><strong>Delete all data:</strong> Settings › Advanced › Delete All Data (two-step confirmation) deletes the App's database, library videos, map cache, and settings. The originals in Health Connect and videos already saved to your gallery are not affected.</li>
+                <li><strong>Library:</strong> you can delete single videos or clear the whole Library; copies saved to your gallery remain.</li>
+                <li><strong>Map cache:</strong> can be cleared at any time in Settings.</li>
+                <li><strong>Uninstall:</strong> removes all of the App's data from that device. Records in Health Connect stay until you delete them there.</li>
+                <li><strong>Permissions:</strong> manage Health Connect access in Health Connect, and notifications in Android Settings.</li>
+                <li><strong>Data held by Google</strong> (ads, purchases) is kept under Google's policies; use the options in the Google Privacy Policy.</li>
+            </ul>
+        </div>
+
+        <!-- ===================== Common ===================== -->
+        <div class="section">
+            <h2>What We Do Not Collect</h2>
+
+            <p>On both platforms, RunVue does not collect, store on any server, or share any of the following:</p>
+            <ul>
+                <li>Name, email address, phone number, or any other personal identifier — the App has no accounts or sign-in (unless you contact us yourself)</li>
+                <li>Your route or coordinates — not even in map download requests</li>
+                <li>Your health data — it is never sent off your device by the App, and never given to the ad SDK</li>
+                <li>Contacts, existing photos or videos in your library, or browsing history</li>
+                <li>Payment information — purchases are handled entirely by Apple (iPhone) or Google Play (Android)</li>
+                <li>Analytics, usage statistics, or crash reports sent automatically by the App's own code</li>
+            </ul>
+            <p>Advertising identifiers: the iPhone app does not access the advertising identifier (IDFA) and does not track you. The Android app's free version uses the Android advertising ID only through Google AdMob, as described in "Android: Advertising"; Pro subscribers' devices do not start the ad SDK.</p>
+        </div>
+
+        <div class="section">
+            <h2>Sharing</h2>
+
+            <p>A video you choose to save or share yourself goes wherever you send it (Photos or your gallery, messages, another app, and so on). Because a video shows your entire route from start to finish, along with street names, date and time, and heart rate, <strong>a one-time notice appears before your first save or share</strong> ("The video shows your full route, including start and finish. If you started near home, this could reveal your location."). This notice is shown only once.</p>
+        </div>
+
+        <div class="section">
+            <h2>Sharing and Third Parties</h2>
+
+            <p>We do not sell or rent your data. Your health and route data are not shared with anyone, and the developer receives none of it. The services involved are:</p>
+            <ul>
+                <li><strong>Both versions:</strong> Cloudflare, which hosts our static map storage (<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>), and Tally, which hosts our contact form if you choose to use it.</li>
+                <li><strong>iPhone:</strong> Apple's App Store and StoreKit for purchases, and HealthKit and the Health app for the data you choose to let the App read (<a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>).</li>
+                <li><strong>Android:</strong> Google AdMob and User Messaging Platform (ads and consent, free version only), Google Play Billing (purchases), and Health Connect (the on-device health data store you control). Google's handling is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+            </ul>
+            <p>We may disclose information we hold (only messages and files you sent us) if required by law. Map data is sourced from © OpenStreetMap contributors and the Overture Maps Foundation (ODbL).</p>
+            <!-- [법무 확인] Whether AdMob's collection on Android is a "sale"/"sharing" (US state laws), a third-party provision or Google's own collection (Korea PIPA), and our GDPR role (joint controller with Google for ads vs. no processing by us). The wording here is factual and avoids characterizing it. -->
+        </div>
+
+        <div class="section">
+            <h2>Your Rights</h2>
+            <ul>
+                <li>Data on your device is under your control: you can delete it in the App (see the deletion sections above) and manage permissions in your device's settings, Apple Health, or Health Connect.</li>
+                <li>Depending on where you live (for example under the GDPR, UK GDPR, US state privacy laws, or Korea's Personal Information Protection Act), you may have the right to access, correct, delete, restrict, or object to the processing of personal information, to withdraw consent, to opt out of targeted advertising or the "sale" or "sharing" of personal information, and to complain to your data protection authority.</li>
+                <li>For data we hold (only messages and files you sent us), contact us and we will respond without undue delay. For data Google received through its SDKs on Android, use the options in the Google Privacy Policy. Ad consent and opt-out controls are described in "Android: Advertising".</li>
+                <li>We do not discriminate against you for exercising these rights.</li>
+            </ul>
+            <!-- [법무 확인] Legal bases (GDPR Art. 6/9): Android ads = consent via UMP in the EEA/UK/CH (Google as controller of SDK data); support messages = legitimate interests; health data is processed only on the user's device and never reaches us — confirm the Art. 9 analysis. GDPR Art. 27 EU/UK representative — confirm whether an exemption applies. -->
+        </div>
+
         <div class="section">
             <h2>Children's Privacy</h2>
 
-            <p>RunVue does not knowingly collect information from children under 13. Because the App collects no personally identifiable information, there is no process for collecting it from anyone.</p>
+            <p>RunVue is not directed to children and does not knowingly collect information from children under 13. The App has no accounts and collects no personally identifiable information itself. On Android, ads are not configured as child-directed and are limited to a maximum content rating of "Teen". If you believe a child has sent us personal information, contact us and we will delete it.</p>
+            <!-- [법무 확인] Play target audience must be set to exclude under-13s (ads use the default — child-directed tag unset). Confirm the target age group declared in Play Console matches this section. -->
         </div>
 
         <div class="section">
             <h2>Hosting Providers and International Data Transfers</h2>
 
-            <p>Our map tile storage is hosted by Cloudflare, Inc. (United States; requests are served from a Cloudflare data center close to you). When the App downloads map tiles, Cloudflare receives your IP address and the map tile number. We do not store request logs; Cloudflare may keep short-lived technical counters (for example, for rate limiting) under its own policy. Your health data and routes are never sent to Cloudflare or anyone else. If you submit the contact form, it is hosted by Tally BV (Belgium, EU) and receives what you type, including your email address if you enter one. Purchases are processed directly by Apple. If you do not want these transfers, you can avoid downloading maps for new areas or stop using the App.</p>
+            <p>Our map storage is hosted by Cloudflare, Inc. (United States; requests are served from a Cloudflare data center close to you). When the App downloads map data, Cloudflare receives your IP address and the name of the file requested. We do not store request logs; Cloudflare may keep short-lived technical counters (for example, for rate limiting) under its own policy. Your health data and routes are never sent to Cloudflare or anyone else.</p>
+            <p>On Android, information collected by Google's ad and consent SDKs (free version) and by Google Play Billing is processed by Google LLC and its affiliates, including in the United States, under Google's safeguards. If you submit the contact form, it is hosted by Tally BV (Belgium, EU) and receives what you type, including your email address if you enter one. On iPhone, purchases are processed directly by Apple.</p>
+            <p>If you do not want these transfers, you can avoid downloading maps for new areas, subscribe to Pro on Android (the ad SDK is not started), not use the contact form, or stop using the App.</p>
         </div>
 
         <div class="section">
             <h2>Changes to This Policy</h2>
 
-            <p>If we make material changes, we will update the Effective Date above. Significant changes will also be noted in the App Store release notes.</p>
+            <p>If we make material changes, we will update the dates above. Significant changes will also be noted in the App Store and Google Play release notes, and if a change adds new data processing, we will update this policy before releasing the feature.</p>
             <h3>Change history</h3>
             <ul>
                 <li>October 1, 2026: First published</li>
                 <li>October 2, 2026: Corrected the Pro subscription description and the description of how subscription status is kept; added hosting and international transfer details</li>
+                <li>October 3, 2026: Added the Android version (Health Connect, Google AdMob ads and consent for free users, Google Play Billing, Android backup and deletion); separated iPhone-only statements; added "Your Rights"</li>
             </ul>
         </div>
 
@@ -297,8 +518,10 @@
 
             <p>For any privacy-related questions or requests:</p>
             <div class="contact-info">
-                <p>https://tally.so/r/nrxJXo</p>
+                <p><a href="https://tally.so/r/nrxJXo">https://tally.so/r/nrxJXo</a></p>
+                <p>support@setlog.net</p>
             </div>
+            <!-- [법무 확인] Support-message retention: the Korean version states deletion 3 months after the answer (same as Tally row) — confirm and mirror here if required. -->
         </div>
     </div>
 </body>
