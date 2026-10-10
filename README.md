@@ -26,3 +26,8 @@
 - 개인정보처리방침: https://juki-j.github.io/privacy-policy/giggly-en.html · https://juki-j.github.io/privacy-policy/giggly-kr.html
 - 이용약관(iOS 절 = Apple 표준 EULA, Android 약관): https://juki-j.github.io/privacy-policy/giggly-terms-en.html · https://juki-j.github.io/privacy-policy/giggly-terms-kr.html
 - 생체정보 보관·파기 정책(BIPA 740 ILCS 14/15(a)): https://juki-j.github.io/privacy-policy/giggly-biometric-en.html · https://juki-j.github.io/privacy-policy/giggly-biometric-kr.html
+
+## Belvue (macOS) — 영어·한국어 (2026-10-11, 그 밖의 언어는 영어 기본)
+앱 언어가 ko면 kr, 그 밖은 en을 연다(`Belvue SupportLinks.swift`). 내용은 PrivacyInfo.xcprivacy·App Privacy 라벨("수집하지 않음")과 일치해야 한다 — 앱이 데이터를 수집하게 되면 먼저 이 문서를 고친다.
+- https://juki-j.github.io/privacy-policy/belvue-en.html
+- https://juki-j.github.io/privacy-policy/belvue-kr.html
