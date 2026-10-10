@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giggly 생체정보 보관·파기 정책</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #1d1d1f;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: #1d1d1f;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #1d1d1f;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #515154;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #515154;
+            line-height: 1.8;
+        }
+
+        .update-date {
+            color: #86868b;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            background-color: #f5f5f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f7;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch a {
+            color: #007AFF;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="ko">
+        <div class="lang-switch">
+            <a href="#ko">한국어</a>
+            <a href="https://juki-j.github.io/privacy-policy/giggly-biometric-en.html">English</a>
+        </div>
+
+        <h1>Giggly 생체정보 보관·파기 정책</h1>
+        <p class="update-date">시행일: 2026년 10월 10일</p>
+
+        <p>이 정책은 Giggly(이하 "앱", "저희")를 개발·운영하는 대한민국의 개인 개발자 JUKI(사업자등록번호 604-20-14584)가 공개합니다. 문의: <a href="mailto:support@setlog.net">support@setlog.net</a></p>
+        <p>일부 법령은 "생체 식별자"와 "생체정보"를 규율합니다 — 예를 들어 미국 일리노이주 생체정보 보호법(740 ILCS 14, BIPA), 텍사스주 생체 식별자 수집·이용법(Tex. Bus. &amp; Com. Code § 503.001, CUBI), 워싱턴주 생체 식별자법(RCW 19.375). Giggly는 실 연출에 쓸 숫자를 정하기 위해 얼굴 모양을 읽습니다. 이 처리가 각 법령상 생체정보에 해당하는지와 관계없이, 저희는 이 정책을 적용합니다. 이 정책은 <a href="https://juki-j.github.io/privacy-policy/giggly-kr.html">개인정보처리방침</a>의 일부입니다.</p>
+
+        <div class="highlight">
+            <p><strong>요약:</strong> 얼굴 기하는 이용자 기기에서 계산되고, 얼굴이 화면에 있는 동안만 기기의 임시 메모리에 있으며, 그 얼굴이 화면을 벗어나면 약 0.5초 안에 — 그리고 어떤 경우든 카메라가 멈추거나 앱이 종료될 때 — 폐기됩니다. 저장 공간에 기록되지 않고, 저희나 다른 누구에게도 전송되지 않으며, 저희는 이 정보에 접근하지 않습니다. 따라서 얼굴 기하의 보관 기간은 실시간 카메라 세션으로 한정됩니다. 저희는 이 정보를 판매·임대·거래하거나 이익을 얻는 데 쓰지 않습니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>1. 적용 대상</h2>
+            <p>이 정책에서 <strong>"얼굴 기하"</strong>란 다음을 말합니다.</p>
+            <ul>
+                <li>앱이 이용자 기기에서 Google의 오픈소스 라이브러리 MediaPipe로 카메라 영상에서 계산하는 얼굴 랜드마크(눈·코·입·윤곽 등 얼굴 위 점의 위치)</li>
+                <li>그 점들에서 앱이 계산하는 측정값(거리 사이의 비율, 고개 각도 등)과 이를 합친 값 하나</li>
+                <li>이로부터 화면 연출을 위해 파생한 정보(실을 그릴 위치 등)</li>
+            </ul>
+            <p>앱은 사람을 인식·식별하기 위한 얼굴 템플릿, 페이스프린트 등의 기록을 만들지 않고, 얼굴을 저장된 얼굴과 비교하지 않습니다. Apple Face ID나 기기의 얼굴 잠금 해제를 쓰지 않으며 그 데이터를 받지도 않습니다.</p>
+            <p>펫 모드에서는 사람 얼굴 랜드마크 감지가 꺼지고, 앱은 고양이·개를 화면 속 상자로만 감지합니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. 목적</h2>
+            <p>얼굴 기하는 한 가지 목적, 즉 Giggly의 실시간 연출 — 얼굴을 읽을 만큼 안정적인지 판단하고, 그 얼굴의 실 개수를 정하고, 실을 머리에 붙이고, 표정에 따라 움직이는 것 — 에만 쓰입니다. 식별, 광고, 통계, 프로파일링 등 다른 목적에는 쓰지 않습니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. 고지와 동의</h2>
+            <p>카메라를 처음 쓰기 전에 앱은 얼굴 모양을 실시간으로 읽어 숫자를 정한다는 것, 얼굴 모양은 기기 안에서 처리되며 저장·전송되지 않는다는 것을 설명하는 화면을 보여 줍니다. 이용자가 <strong>Agree &amp; Continue</strong>를 누르고 시스템의 카메라 권한 요청을 허용한 뒤에만 카메라가 시작됩니다. 앱은 친구에게 카메라를 비추거나 친구가 나온 클립을 올리기 전에 먼저 물어보도록 안내합니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. 보관 일정</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>데이터</th><th>보관 위치</th><th>보관 기간</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>화면에 있는 얼굴의 랜드마크·측정값</td>
+                            <td>기기의 임시 메모리(RAM)만. 파일·데이터베이스·사진 보관함·백업·로그에 기록하지 않고 전송하지 않음</td>
+                            <td>그 얼굴이 화면에 있는 동안만. 얼굴이 화면을 벗어나면 약 0.5초 안에 폐기하고, 카메라가 멈추거나 사람/펫 모드·카메라를 바꾸거나 광고가 표시되거나 앱이 백그라운드로 가거나 종료되면 즉시 폐기</td>
+                        </tr>
+                        <tr>
+                            <td>최근 10초 동안 얼굴 기하에서 파생한 연출 데이터(클립을 만들 수 있도록 보관하는 실·오버레이 위치)</td>
+                            <td>기기의 임시 메모리만(10초 순환 버퍼)</td>
+                            <td>최근 10초만 남도록 계속 덮어쓰고, 위와 같은 시점에 비움. 저장한 클립에는 이 데이터가 아니라 그려진 화면이 담김</td>
+                        </tr>
+                        <tr>
+                            <td>"내 숫자"(선택)</td>
+                            <td>이용자 본인의 기기(6절)</td>
+                            <td>이용자가 설정에서 삭제하거나 앱을 다시 설치할 때까지</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>얼굴 기하는 실시간 카메라 세션 동안만 존재하므로, 그 목적 — 해당 얼굴에 대한 실시간 연출 — 이 끝나는 즉시 파기됩니다. 이는 법령이 정한 한도, 예를 들어 최초 목적이 달성된 때 또는 마지막 상호작용 후 3년 중 먼저 오는 때(일리노이), 합리적인 기간 안에 그리고 목적 종료 후 1년 이내(텍사스)보다 훨씬 짧습니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. 파기 지침</h2>
+            <ul>
+                <li><strong>자동 파기:</strong> 앱은 4절의 시점에 얼굴 기하를 메모리에서 해제합니다. 해제된 메모리는 운영체제가 회수해 덮어씁니다. 이용자가 따로 할 일은 없습니다.</li>
+                <li><strong>다른 곳에 사본 없음:</strong> 얼굴 기하는 저장 공간에 기록되지 않고, 기기 백업·충돌 보고·이용 통계에 포함되지 않으며, 저희·Google·Cloudflare 등 누구에게도 전송되지 않습니다. 파기해야 할 서버 사본이 없습니다.</li>
+                <li><strong>앱을 종료</strong>하면 카메라 세션이 끝나고 메모리에 남은 얼굴 기하도 파기됩니다.</li>
+                <li><strong>저장한 클립</strong>은 이용자가 사진 보관함에 저장하거나 공유하기로 한 영상입니다. 기기의 일반 사진·영상이며 저희는 받지 않습니다. 사진 보관함이나 공유한 앱에서 삭제할 수 있습니다.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. "내 숫자"</h2>
+            <p>"내 숫자"는 이용자가 자신의 숫자를 자기 휴대폰에 고정하는 선택 기능입니다. 이용자가 별도의 확인 화면에서 동의하면, 앱은 <strong>11가지 숫자 중 무엇이 나왔는지</strong>(0~10 사이의 값 하나)와 설정한 날짜만 저장합니다. 얼굴 점, 측정값, 이미지, 템플릿은 저장하지 않습니다. 11가지 숫자 각각을 수많은 사람이 공유하므로 이 값으로는 누구도 식별할 수 없으며, 저희는 이를 생체 식별자로 보지 않습니다. 그래도 신중하게 다룹니다.</p>
+            <ul>
+                <li>그 기기에만 저장됩니다. iPhone에서는 다른 기기나 백업으로 옮겨지지 않는 설정의 키체인에, Android에서는 클라우드 백업·기기 간 이전에서 제외된 저장 공간에 보관합니다.</li>
+                <li>저희에게 전송되거나 광고·통계에 쓰이지 않습니다.</li>
+                <li>이용자는 언제든 설정 → My Number → Delete에서 삭제할 수 있고 즉시 지워집니다. 앱을 삭제했다가 다시 설치하면, 앱이 첫 실행 때 이전의 내 숫자를 지웁니다.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. 공개와 판매</h2>
+            <p>저희는 얼굴 기하를 판매·임대·거래하거나 이익을 얻는 데 쓰지 않습니다. 누구에게도 공개·재공개·배포하지 않으며, 앱은 이 정보가 기기 밖으로 나가지 않도록 설계되었습니다. 저희 자신도 이 정보를 받지 않습니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. 보호 조치</h2>
+            <p>얼굴 기하는 기기에서 앱 자체의 메모리 안에서 처리되며, 운영체제의 앱 샌드박스 때문에 다른 앱은 이를 읽을 수 없습니다. 저희는 다른 기밀·민감 정보를 보호하는 방식과 같거나 그 이상의 수준, 그리고 업계의 합리적인 주의 기준에 맞는 수준으로 이를 보호합니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. 지역 제한</h2>
+            <p>일부 지역에서는 Giggly가 사람 모드를 꺼서 그 지역에서는 사람 얼굴을 읽지 않으며, 펫 모드는 계속 쓸 수 있습니다. 지역을 확인하는 방법은 개인정보처리방침에 설명되어 있습니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>10. 자원자 테스트</h2>
+            <p>같은 얼굴이 같은 숫자를 얻도록 앱을 보정하기 위해, 미리 서면으로 동의한 성인 자원자(만 19세 이상)를 대상으로 소규모 테스트를 할 수 있습니다. 이 테스트에서는 얼굴 랜드마크 측정값을 가명 코드로 테스트 기기와 분석용 컴퓨터에 기록하며, 앱에는 사진·영상·이름을 남기지 않습니다. 측정값은 어떤 온라인 서비스에도 올리지 않습니다. 원시 측정값은 분석이 끝나는 즉시, 어떤 경우든 기록 후 1년 이내에 파기하며, 자원자는 언제든 자기 데이터의 삭제를 요청할 수 있습니다. 얼굴 정보가 없는 결과 요약과 그로부터 정한 공식 설정값만 남깁니다. 앱 이용자의 데이터는 이 테스트에 쓰지 않습니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>11. 변경과 문의</h2>
+            <p>이 정책을 변경하면 위의 시행일을 갱신합니다. 이 정책에 관한 문의는 아래로 보내 주세요.</p>
+            <div class="contact-info">
+                <p><strong>개발자:</strong> JUKI</p>
+                <p><strong>이메일:</strong> <a href="mailto:support@setlog.net">support@setlog.net</a></p>
+                <p><strong>사업자등록번호:</strong> 604-20-14584</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

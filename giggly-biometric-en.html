@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giggly Biometric Data Retention and Destruction Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #1d1d1f;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: #1d1d1f;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #1d1d1f;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #515154;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #515154;
+            line-height: 1.8;
+        }
+
+        .update-date {
+            color: #86868b;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            background-color: #f5f5f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f7;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch a {
+            color: #007AFF;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="en">
+        <div class="lang-switch">
+            <a href="https://juki-j.github.io/privacy-policy/giggly-biometric-kr.html">한국어</a>
+            <a href="#en">English</a>
+        </div>
+
+        <h1>Giggly Biometric Data Retention and Destruction Policy</h1>
+        <p class="update-date">Effective Date: October 10, 2026</p>
+
+        <p>This policy is published by JUKI, an individual developer in the Republic of Korea (business registration number 604-20-14584), who develops and operates Giggly ("the App", "we", "our"). Contact: <a href="mailto:support@setlog.net">support@setlog.net</a>.</p>
+        <p>Some laws regulate "biometric identifiers" and "biometric information" — for example the Illinois Biometric Information Privacy Act (740 ILCS 14), the Texas Capture or Use of Biometric Identifier Act (Tex. Bus. &amp; Com. Code § 503.001), and Washington's biometric identifier law (RCW 19.375). Giggly reads the shape of faces to work out a number for its string effect. Whether or not that processing counts as biometric data under a given law, we apply this policy to it. This policy is part of our <a href="https://juki-j.github.io/privacy-policy/giggly-en.html">Privacy Policy</a>.</p>
+
+        <div class="highlight">
+            <p><strong>In short:</strong> face geometry is computed on your device, held only in the device's temporary memory while a face is on screen, and discarded within about half a second after that face leaves the view — and in every case when the camera stops or the App closes. It is never written to storage, never sent to us or to anyone else, and we never have access to it. Our retention period for face geometry is therefore limited to the live camera session. We do not sell, lease, trade, or otherwise profit from it.</p>
+        </div>
+
+        <div class="section">
+            <h2>1. What This Policy Covers</h2>
+            <p>In this policy, <strong>"face geometry"</strong> means:</p>
+            <ul>
+                <li>the face landmark points (positions of points on the face, such as the eyes, nose, mouth, and outline) that the App computes from camera frames using Google's open-source MediaPipe library, running on your device;</li>
+                <li>the measurements the App calculates from those points (for example ratios between distances, and head angle) and the single value it combines them into; and</li>
+                <li>information derived from these for the on-screen effects, such as where to draw the strings.</li>
+            </ul>
+            <p>The App does not create a face template, faceprint, or any other record designed to recognize or identify a person, and it does not compare a face with any stored face. The App also does not use Apple Face ID or the device's face unlock, and it never receives data from them.</p>
+            <p>In Pets mode, face landmark detection for people is turned off; the App only detects cats and dogs as boxes in the picture.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Purpose</h2>
+            <p>Face geometry is used for one purpose only: to show Giggly's live effect — deciding when a face is steady enough to read, picking the number of strings for that face, attaching the strings to the head, and animating them with expressions. It is not used for identification, advertising, analytics, profiling, or any other purpose.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. Notice and Consent</h2>
+            <p>Before the camera is used for the first time, the App shows a screen explaining that it reads face shape live to pick a number and that face shape is processed on the device and is not stored or sent. The camera starts only after the user taps <strong>Agree &amp; Continue</strong> and then allows camera access in the system prompt. The App asks users to check with friends before pointing the camera at them and before posting clips of them.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Retention Schedule</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Data</th><th>Where it is kept</th><th>How long</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Face landmark points and measurements for a face on screen</td>
+                            <td>The device's temporary memory (RAM) only. Never written to files, databases, the photo library, backups, or logs, and never transmitted.</td>
+                            <td>Only while that face is in view. Discarded within about 0.5 seconds after the face leaves the view, and immediately when the camera stops, the App switches between People and Pets mode or between cameras, an ad is shown, the App goes to the background, or the App is closed.</td>
+                        </tr>
+                        <tr>
+                            <td>Effect data derived from face geometry for the last 10 seconds (positions of the strings and overlay, kept so that a clip can be made)</td>
+                            <td>The device's temporary memory only, in a rolling 10-second buffer.</td>
+                            <td>Overwritten continuously so that only the last 10 seconds exist, and cleared at the same moments as above. A clip you save contains the rendered picture, not this data.</td>
+                        </tr>
+                        <tr>
+                            <td>"My Number" (optional)</td>
+                            <td>The user's own device (see Section 6).</td>
+                            <td>Until the user deletes it in Settings, or the App is reinstalled.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Because face geometry exists only during the live camera session, it is destroyed as soon as its purpose — the live effect for that face — has been served. This is well within the limits set by law, such as when the initial purpose has been satisfied or within three years of the individual's last interaction, whichever occurs first (Illinois), or within a reasonable time and no later than one year after the purpose expires (Texas).</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Destruction Guidelines</h2>
+            <ul>
+                <li><strong>Automatic:</strong> the App releases face geometry from memory at the moments listed in Section 4. Released memory is reclaimed and overwritten by the operating system. No user action is needed.</li>
+                <li><strong>No copies elsewhere:</strong> face geometry is not written to storage, included in device backups, sent in crash reports or app statistics, or transmitted to us, to Google, to Cloudflare, or to anyone else. There is no copy on any server that would need to be destroyed.</li>
+                <li><strong>Closing the App</strong> ends the camera session and destroys any face geometry still in memory.</li>
+                <li><strong>Saved clips</strong> are videos that you choose to save to your photo library or share. They are ordinary photos and videos on your device; we never receive them. You can delete them in your photo library or in the app you shared them to.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. "My Number"</h2>
+            <p>"My Number" is an optional feature that lets a user pin their own number on their own phone. When the user agrees on a separate confirmation screen, the App saves only <strong>which of the 11 possible numbers</strong> they got (a single value from 0 to 10) and the date it was set. It does not save face points, measurements, images, or any template. Because millions of people share each of the 11 numbers, this value cannot identify anyone, and we do not consider it a biometric identifier. We still treat it carefully:</p>
+            <ul>
+                <li>It is stored only on that device. On iPhone it is kept in the Keychain with a setting that does not move to other devices or backups; on Android it is excluded from cloud backup and device-to-device transfer.</li>
+                <li>It is never sent to us or used for ads or analytics.</li>
+                <li>The user can delete it at any time in Settings → My Number → Delete, and it is removed immediately. If the App is deleted and installed again, the App removes any earlier My Number on first launch.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Disclosure and Sale</h2>
+            <p>We do not sell, lease, trade, or otherwise profit from face geometry. We do not disclose, redisclose, or disseminate it to anyone, and the App is designed so that it never leaves the device. We never receive it ourselves.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Security</h2>
+            <p>Face geometry is processed inside the App's own memory on the device, which other apps cannot read under the operating system's app sandbox. We protect it using a standard of care that is at least as protective as the way we protect other confidential and sensitive information, and that meets the reasonable standard of care in our industry.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Regional Limits</h2>
+            <p>In some areas, Giggly turns off People mode, so the App does not read faces of people there; Pets mode remains available. How the App checks the area is explained in the Privacy Policy.</p>
+        </div>
+
+        <div class="section">
+            <h2>10. Testing With Volunteers</h2>
+            <p>To calibrate the App so that the same face gets the same number, we may run a small test with adult volunteers (19 years or older) who give written consent in advance. In that test, face landmark measurements are recorded on test devices and an analysis computer under pseudonymous codes, without photos, videos, or names in the App. They are not uploaded to any online service. The raw measurements are destroyed as soon as the analysis is complete, and in any case within one year after they were recorded; a volunteer can ask for their data to be deleted at any time. Only summary results and the resulting formula settings, which contain no face data, are kept. No data from App users is used for this.</p>
+        </div>
+
+        <div class="section">
+            <h2>11. Changes and Contact</h2>
+            <p>If we change this policy, we will update the Effective Date above. Questions about this policy can be sent to:</p>
+            <div class="contact-info">
+                <p><strong>Developer:</strong> JUKI</p>
+                <p><strong>Email:</strong> <a href="mailto:support@setlog.net">support@setlog.net</a></p>
+                <p><strong>Business registration number (Korea):</strong> 604-20-14584</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

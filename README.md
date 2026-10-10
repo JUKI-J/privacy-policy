@@ -19,3 +19,10 @@
 
 ## LunchLog 급식로그 (iOS · Android) — 한국어 (2026-10-02, 국내 전용)
 - https://juki-j.github.io/privacy-policy/lunchlog-kr.html
+
+## Giggly (iOS · Android) — 영어·한국어 (시행일 2026-10-10 **초안**, 그 밖의 언어는 영어 기본)
+> **C1 변호사 검토 전 초안** — 미국 변호사 1회 검토(BIPA·텍사스 CUBI·COPPA·텍사스 앱스토어 책임법·RegionGuard) 후 확정. 확정 전 문구를 바꾸면 앱 동작(`Giggly/planning/docs/product-concept.md` D16·D18·D20·D21·D22)과 대조할 것.
+한 문서가 두 플랫폼을 다룬다. 앱 설정 화면은 영문 개인정보처리방침·이용약관을 연다(생체정보 정책은 개인정보처리방침에서 링크).
+- 개인정보처리방침: https://juki-j.github.io/privacy-policy/giggly-en.html · https://juki-j.github.io/privacy-policy/giggly-kr.html
+- 이용약관(iOS 절 = Apple 표준 EULA, Android 약관): https://juki-j.github.io/privacy-policy/giggly-terms-en.html · https://juki-j.github.io/privacy-policy/giggly-terms-kr.html
+- 생체정보 보관·파기 정책(BIPA 740 ILCS 14/15(a)): https://juki-j.github.io/privacy-policy/giggly-biometric-en.html · https://juki-j.github.io/privacy-policy/giggly-biometric-kr.html
