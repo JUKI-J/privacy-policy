@@ -20,12 +20,13 @@
 ## LunchLog 급식로그 (iOS · Android) — 한국어 (2026-10-02, 국내 전용)
 - https://juki-j.github.io/privacy-policy/lunchlog-kr.html
 
-## Giggly (iOS · Android) — 영어·한국어 (시행일 2026-10-10 **초안**, 그 밖의 언어는 영어 기본)
-> **C1 변호사 검토 전 초안** — 미국 변호사 1회 검토(BIPA·텍사스 CUBI·COPPA·텍사스 앱스토어 책임법·RegionGuard) 후 확정. 확정 전 문구를 바꾸면 앱 동작(`Giggly/planning/docs/product-concept.md` D16·D18·D20·D21·D22)과 대조할 것.
-한 문서가 두 플랫폼을 다룬다. 앱 설정 화면은 영문 개인정보처리방침·이용약관을 연다(생체정보 정책은 개인정보처리방침에서 링크).
+## Giggly (iOS · Android) — 영어·한국어 (시행일 2026-10-11 **초안** — D24 개정: 앱 내 연령 질문 폐지·스토어 연령 신호만·전원 비맞춤 광고·추적 없음·EEA 제한 광고·한국 최소 수집 모드, 그 밖의 언어는 영어 기본)
+> **C1 변호사 검토 전 초안** — 미국 변호사 1회 검토(BIPA·텍사스 CUBI·COPPA·텍사스 앱스토어 책임법·RegionGuard) 후 확정. 확정 전 문구를 바꾸면 앱 동작(`Giggly/planning/docs/product-concept.md` D16·D18·D21·D22·D24)과 대조할 것. ⚑ kr "만 14세 미만은 이용 대상이 아니다"·한국 최소 수집 모드는 국내 변호사 확인 필요.
+한 문서가 두 플랫폼을 다룬다. 앱(GG-003 고지·설정)은 앱 UI 언어가 ko면 `-kr`, 그 밖은 `-en`을 연다(개인정보처리방침·이용약관·생체정보 정책).
 - 개인정보처리방침: https://juki-j.github.io/privacy-policy/giggly-en.html · https://juki-j.github.io/privacy-policy/giggly-kr.html
 - 이용약관(iOS 절 = Apple 표준 EULA, Android 약관): https://juki-j.github.io/privacy-policy/giggly-terms-en.html · https://juki-j.github.io/privacy-policy/giggly-terms-kr.html
 - 생체정보 보관·파기 정책(BIPA 740 ILCS 14/15(a)): https://juki-j.github.io/privacy-policy/giggly-biometric-en.html · https://juki-j.github.io/privacy-policy/giggly-biometric-kr.html
+- 지원(Support URL — ASC·Play 입력용, 2026-10-11): https://juki-j.github.io/privacy-policy/giggly-support-en.html · https://juki-j.github.io/privacy-policy/giggly-support-kr.html
 
 ## Belvue (macOS) — 영어·한국어 (2026-10-11, 그 밖의 언어는 영어 기본)
 앱 언어가 ko면 kr, 그 밖은 en을 연다(`Belvue SupportLinks.swift`). 내용은 PrivacyInfo.xcprivacy·App Privacy 라벨("수집하지 않음")과 일치해야 한다 — 앱이 데이터를 수집하게 되면 먼저 이 문서를 고친다.
