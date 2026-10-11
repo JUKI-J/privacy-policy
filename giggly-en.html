@@ -174,7 +174,7 @@
                     </thead>
                     <tbody>
                         <tr><td>Camera picture, face shape (landmarks and measurements), numbers, expressions</td><td>Processed on your device in temporary memory only. Not stored, not sent</td><td>2</td></tr>
-                        <tr><td>Age range from your app store (where available)</td><td>Used on your device only. Only the outcome (allowed, blocked, or waiting for a parent) is stored on your device</td><td>3</td></tr>
+                        <tr><td>Age range from your app store (where available)</td><td>Used on your device only. The resulting state (allowed as teen, adult, or unconfirmed; blocked; waiting for a parent; or declined) is stored on your device and never sent to us</td><td>3</td></tr>
                         <tr><td>"My Number" (optional)</td><td>One of 11 values, stored only on your device</td><td>4</td></tr>
                         <tr><td>Last few seconds of video, and of microphone audio if you allow it</td><td>Temporary memory on your device while the camera is open. Kept only if you make a clip</td><td>5</td></tr>
                         <tr><td>Clips you save or share</td><td>Your photo library, or the app you choose to share to</td><td>5</td></tr>
@@ -207,8 +207,8 @@
                 <li><strong>If the app store indicates the user is under 13,</strong> the App stops: it shows a "Giggly is for ages 13+" screen and does not use the camera or start ads, app statistics, crash reports, or the regional check. If this signal arrives after those services have started, the App stops them and clears the app statistics and unsent crash reports held on the device.</li>
                 <li>If the app store reports that a parent's approval is pending or was declined (for example under Texas law), the App waits or stops until it is approved.</li>
                 <li>In all other cases — including when no signal is available — the App works the same way, and the ad and statistics settings in Sections 8 and 9 are the same for every user, whatever their age.</li>
-                <li><strong>What is saved:</strong> only the outcome — allowed, blocked, or waiting for a parent — on your device, not the age range itself. So that a block cannot be bypassed by reinstalling, on iPhone it is kept in the Keychain on this device (not synced to iCloud Keychain), stays after the App is deleted, and can be restored from an encrypted backup or device transfer; on Android it is the one App file included in Android backup and device transfer.</li>
-                <li>Your age range or this outcome is never sent to us, to analytics, to crash reports, or to advertisers.</li>
+                <li><strong>What is saved:</strong> the resulting state on your device — allowed (teen, adult, or unconfirmed), blocked, waiting for a parent, or declined. This means a broad age category (teen or adult) can be stored, but never your birth date or exact age, and it is never sent to us. So that a block cannot be bypassed by reinstalling, on iPhone it is kept in the Keychain on this device (not synced to iCloud Keychain), stays after the App is deleted, and may be included in device backups and restored by a device transfer; on Android it is the one App file stored in app data and included in Android backup and device transfer.</li>
+                <li>Your age range or this state is never sent to us, to analytics, to crash reports, or to advertisers.</li>
             </ul>
         </div>
 
@@ -277,7 +277,7 @@
                         <tr><th>Item</th><th>Contents</th><th>Backups</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Age signal outcome</td><td>Allowed, blocked, or waiting for a parent — not your age (Section 3)</td><td>Restored from backups and device transfer; on iPhone kept after the App is deleted</td></tr>
+                        <tr><td>Age signal state</td><td>Allowed (teen, adult, or unconfirmed), blocked, waiting for a parent, or declined — not your birth date or exact age; never sent to us (Section 3)</td><td>Included in backups and device transfer; on iPhone (Keychain) kept after the App is deleted and may be included in device backups</td></tr>
                         <tr><td>My Number (optional)</td><td>One of 11 values and the date it was set</td><td>Not backed up</td></tr>
                         <tr><td>Crush Dex</td><td>Which cards, badges, and titles you have collected and when — not who they came from</td><td>Not backed up</td></tr>
                         <tr><td>Settings and app state</td><td>Sound, haptics, caption settings, selected string style and unlocks, ad-frequency counters, which tips and prompts were shown, whether you agreed to the first-launch screen, regional check result</td><td>Not backed up</td></tr>
@@ -285,7 +285,7 @@
                     </tbody>
                 </table>
             </div>
-            <p>Deleting the App removes this information from your device, except the age signal outcome on iPhone, as explained in Section 3.</p>
+            <p>Deleting the App removes this information from your device, except the age signal state on iPhone, as explained in Section 3.</p>
         </div>
 
         <div class="section">
@@ -322,7 +322,7 @@
             <ul>
                 <li>Face geometry: only while a face is on screen (see the <a href="https://juki-j.github.io/privacy-policy/giggly-biometric-en.html">Biometric Data Retention and Destruction Policy</a>).</li>
                 <li>Rolling video and audio buffer: a few seconds (up to about 10), in memory, while the camera is open; clip working files: until the preview closes or the next launch.</li>
-                <li>On-device items (Section 10): until you delete them or the App, except as noted for the age signal outcome.</li>
+                <li>On-device items (Section 10): until you delete them or the App, except as noted for the age signal state.</li>
                 <li>Firebase: crash reports are kept for 90 days; Analytics event-level data is kept for 2 months, after which only aggregated reports remain.</li>
                 <li>AdMob, Google Play, and Apple: according to their own policies.</li>
                 <li>Regional check: nothing is stored by Giggly; Cloudflare security processing is short-term.</li>
