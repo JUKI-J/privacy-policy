@@ -156,7 +156,7 @@
         </div>
 
         <h1>IntervalRunner Privacy Policy</h1>
-        <p class="update-date">Effective Date: October 8, 2026</p>
+        <p class="update-date">Effective Date: October 19, 2026</p>
 
         <p>IntervalRunner ("the App", "we", "our") is developed and operated by JUKI, an individual developer in the Republic of Korea (business registration number 604-20-14584). Contact: <a href="mailto:support@setlog.net">support@setlog.net</a>.</p>
         <p>IntervalRunner is an interval running app. You set time, distance, or heart-rate intervals, and the App alerts you by voice, sound, and haptics or vibration when you drift from your target pace. This Privacy Policy covers every version of the App: the app for <strong>iPhone and Apple Watch</strong> (iOS and watchOS) and the app for <strong>Android phones and Wear OS watches</strong>. Where the versions work differently, the section says which version it describes. In every version, the App has no user accounts, and we do not operate a server for it.</p>
@@ -190,6 +190,11 @@
                         <td>Workouts, run history, settings, heart rate, routes, Health data</td>
                         <td>On your iPhone and Apple Watch</td>
                         <td>No one through the App. Optionally the Health app (Section 3), your own device backups (Section 10), files and images you export (Section 11), and a diagnostics file you choose to send us (Section 12)</td>
+                    </tr>
+                    <tr>
+                        <td>Running workouts other apps saved to Health (distance, time, active energy, heart rate, the name of the app; the route only while you open the run), and a summary of them kept in a cache</td>
+                        <td>On your iPhone only (a cache excluded from backups)</td>
+                        <td>No one through the App — except a share shot you create from one of these runs and choose to save or share yourself (Section 11)</td>
                     </tr>
                     <tr>
                         <td>Photos and videos you pick, or take yourself with the in-app camera (no sound), for a share shot</td>
@@ -277,11 +282,12 @@
             <h3>iPhone and Apple Watch: HealthKit</h3>
             <ul>
                 <li><strong>Written to Health (with your permission):</strong> workouts (outdoor or indoor running, including the interval segments), distance, active energy, the workout route, and heart-rate readings recorded during a workout — including those from a Bluetooth heart-rate monitor you connect to your iPhone.</li>
-                <li><strong>Read from Health (with your permission):</strong> heart rate, resting heart rate, date of birth, and running speed.</li>
-                <li><strong>Why:</strong> to record your run in the Health app, to measure heart rate during a run, and to suggest heart-rate zones and estimate calories. The App does not request or read any other Health data.</li>
-                <li><strong>Where it goes:</strong> HealthKit data is kept on your device and in your Health database. The App does not upload it to us or to any server of ours and does not store it in iCloud. Heart-rate readings from your workouts can be part of a diagnostics file only if you choose to export one and send it to us (Section 12). How the Health app itself stores and syncs your data (for example, through iCloud) is managed by Apple and your own settings.</li>
+                <li><strong>Read from Health (with your permission):</strong> heart rate, resting heart rate, date of birth, running speed, and body weight (weight is read only to estimate the active energy of outdoor runs you record on the iPhone alone).</li>
+                <li><strong>Runs from other apps (from version 1.2.0, with your permission):</strong> the App can also read running workouts that other apps saved to Health, so they appear in your history. For each run it reads the start and end time, distance, active energy, heart rate, and the name of the app that saved it, and — only while you open that run — its route (the App asks for access to workouts, workout routes, distance, and active energy). This is on by default once you allow access, and you can turn it off at any time in Settings → Data &amp; Privacy → Import Runs from Other Apps. The App cannot change or delete what other apps saved to Health.</li>
+                <li><strong>Why:</strong> to record your run in the Health app, to measure heart rate during a run, to suggest heart-rate zones and estimate calories, and to show your runs from other apps in your history. Apart from the data listed here, the App does not request or read any other Health data.</li>
+                <li><strong>Where it goes:</strong> HealthKit data is kept on your device and in your Health database. The App does not upload it to us or to any server of ours and does not store it in iCloud. For runs from other apps, the App keeps only a summary (times, distance, energy, heart-rate figures, the source app's name, and which runs you hid) in a cache on your iPhone that is excluded from device and iCloud backups, is not included in a diagnostics file, and is deleted when you turn the import off or use Delete All Data. Routes are read only while you view a run and are not stored. If you create a share shot from one of these runs and choose to save or share it, the image shows that run's figures and a route with the start and finish hidden, and goes wherever you send it (Section 11). Heart-rate readings from your workouts can be part of a diagnostics file only if you choose to export one and send it to us (Section 12). How the Health app itself stores and syncs your data (for example, through iCloud) is managed by Apple and your own settings.</li>
                 <li><strong>How it is not used:</strong> HealthKit data is never used for advertising, marketing, or data mining, is never sold, and is never disclosed to advertisers, data brokers, or any other third party. It is never passed to Firebase, and is not used to promote the subscription.</li>
-                <li><strong>Optional:</strong> if you deny read access, the App still works; heart-rate zones and calories that depend on that data are simply not filled in automatically. You can review or revoke access in the Health app (Sharing → Apps) or in Settings.</li>
+                <li><strong>Optional:</strong> if you deny read access, the App still works; heart-rate zones and calories that depend on that data are simply not filled in automatically, and runs from other apps are not shown. You can review or revoke access in the Health app (Sharing → Apps) or in Settings.</li>
             </ul>
 
             <h3>Android and Wear OS: Health Connect</h3>
@@ -307,7 +313,7 @@
                 <li>It is stored on your device. The App does not send it to us or to any server of ours.</li>
                 <li>It is never used for advertising or marketing, and it is never passed to Firebase or to any other third-party SDK.</li>
                 <li>It is never sold, and it is never given to data brokers, advertising platforms, insurers, lenders, or employers, or used for decisions about credit, insurance, or employment.</li>
-                <li>The App does not transfer Health Connect data to anyone. The run data the App keeps itself (including heart rate measured during runs) leaves your device only as described in Sections 9 to 12 — watch sync, your own backup, files you export, and a diagnostics file you choose to send us.</li>
+                <li>The App does not transfer Health Connect data to anyone. The run data the App keeps itself (including heart rate measured during runs) leaves your device only as described in Sections 9 to 12 — watch sync, your own backup, files you export, and a diagnostics file you choose to send us. One more way, from version 1.2.0: if you create a share shot from a run imported from another app and choose to save or share it, that image shows that run's figures (distance, time, pace, heart rate, calories) and a route with the start and finish hidden, and it goes wherever you send it (Section 11). The App itself never sends it anywhere.</li>
                 <li>We have no access to your data in Health Connect.</li>
             </ul>
             <p><strong>The use of information received from Health Connect will adhere to the <a href="https://support.google.com/googleplay/android-developer/answer/12991134">Health Connect Permissions policy</a>, including the Limited Use requirements.</strong></p>
@@ -420,6 +426,7 @@
                 <li>Local counters used to improve the App's design, such as how many times a screen was shown; they are never sent anywhere automatically (see Section 12)</li>
                 <li>Engine traces of your recent workouts, used only for the diagnostics file: speeds, distances, heart rate, step states, and alert events, with positions only in a private coordinate frame (Section 12); and a temporary recovery point for a workout in progress</li>
                 <li><strong>iPhone:</strong> a cached copy of your subscription status: whether Pro is active, the kind of subscription (trial, monthly, or yearly), when it expires, and when it was last checked with Apple. It contains no payment or Apple Account details. It is kept in the App's own storage and in the iOS Keychain; iOS may keep Keychain items even after the App is uninstalled</li>
+                <li><strong>iPhone:</strong> a cache of runs imported from other apps (Section 3), excluded from backups</li>
                 <li><strong>Android:</strong> a size-limited log of recent app events, the cached subscription status (Section 7), and a random installation identifier used only to sync between your own phone and watch</li>
             </ul>
             <p><strong>iPhone and Apple Watch:</strong> the App's widgets and Live Activities read a small amount of the same data (for example the current step and remaining time) on your device.</p>
@@ -435,7 +442,7 @@
         <div class="section">
             <h2>10. Backups and Moving to a New Device</h2>
             <h3>iPhone and Apple Watch</h3>
-            <p>IntervalRunner does not use iCloud or CloudKit to sync data. As with other app data, these files may be included in the iCloud or computer backups you make of your device, which are governed by Apple's terms and your own backup settings.</p>
+            <p>IntervalRunner does not use iCloud or CloudKit to sync data. As with other app data, these files may be included in the iCloud or computer backups you make of your device, which are governed by Apple's terms and your own backup settings. The cache of runs from other apps (Section 3) is not backed up; on a new iPhone it is rebuilt from Health.</p>
 
             <h3>Android and Wear OS</h3>
             <ul>
@@ -456,6 +463,7 @@
                 <li><strong>Route hidden near start and finish:</strong> when you add the route, the points within at least 300 m of the start and of the finish are removed (the exact distance varies slightly per run so it cannot be used to locate the start), and the route is shown only if enough of it remains. Share shots draw the route as a line and contain no map images.</li>
                 <li><strong>Free version:</strong> a small IntervalRunner logo is always shown on share shots; Pro can turn it off.</li>
             </ul>
+            <p><strong>Runs from other apps and recaps (from version 1.2.0).</strong> A share shot made from a run imported from another app (Section 3) shows that run's figures (distance, time, pace, heart rate, calories) and, if you add it, a route with the start and finish hidden in the same way. Recap share shots (weekly, monthly, or yearly totals, Pro) can include runs imported from other apps in their totals; they contain no route. Like every share shot, these are made on your device and go wherever you send them; the App itself never sends them anywhere.</p>
         </div>
 
         <div class="section">
@@ -466,6 +474,7 @@
                 <li><strong>What it contains (iPhone):</strong> device model, iOS version, app version, language and region setting, time zone, Low Power Mode state, the status of each permission, audio output history (output types such as speaker or headphones, never device names), the local counters described above, and the engine traces of your most recent workouts on the iPhone, together with any traces your Watch has sent to it (speeds, distances, <strong>heart-rate readings</strong>, step states, and alert events). In the iPhone version the heart-rate readings are always part of these traces. A file exported from the App's hidden developer tools may also contain the App's own log lines from the last 24 hours, with coordinate-like text removed.</li>
                 <li><strong>What it contains (Android):</strong> device model, Android version, app version, language and region, time zone, battery saver state, the status of each permission, audio output types (such as speaker or headphones — never device names), the on-device counters described above, recent app exit reasons recorded by Android (with coordinate-like text removed), and engine traces of your most recent runs on the phone together with traces your watch sent to it (speeds, distances, step states, alert events, and the workout's settings, including any heart-rate targets you set). <strong>Heart-rate readings are left out of the traces unless you switch on "Include heart rate" on the export screen</strong> (off by default; it applies only to that export). A file exported from the App's hidden developer tools may also contain the App's own log lines from the last 24 hours, with coordinate-like text removed.</li>
                 <li><strong>What it does not contain:</strong> no latitude or longitude. Positions in traces are converted to a private coordinate frame with a random origin and rotation for each session, so that real places are hard to identify, and any trace that contains latitude or longitude fields is left out. No name, email, user-chosen device names, workout history, or Health or Health Connect data values other than the heart-rate readings in the traces described above.</li>
+                <li><strong>Runs from other apps (iPhone):</strong> diagnostics files do not contain runs imported from other apps.</li>
                 <li><strong>Platform crash statistics (iPhone and Apple Watch):</strong> if you have chosen to share analytics with developers in iOS Settings, Apple may also provide us with anonymous crash information through Xcode Organizer and App Store Connect; we do not receive anything that identifies you.</li>
                 <li><strong>Platform crash statistics (Android and Wear OS):</strong> if you have chosen to share usage and diagnostics data with Google on your device, Google Play may also provide us with anonymous crash and performance statistics (Android vitals); we cannot identify you from them.</li>
             </ul>
@@ -562,6 +571,7 @@
                 <li><strong>Permissions:</strong> you can review or change Location, Health, Motion &amp; Fitness, Notifications, and Bluetooth at any time in the iOS Settings app; Settings → Data &amp; Privacy in the App shows their current status and links there.</li>
                 <li><strong>Delete a workout or run:</strong> from the history screens in the App.</li>
                 <li><strong>Delete all data:</strong> Settings → Data &amp; Privacy → Delete All Data removes the App's workouts, history, settings, alert profiles, traces, diagnostics files, temporary export files, and widget data on the iPhone. It also clears the Keychain copy of your subscription status; the App then re-reads the status from Apple, so an active subscription stays active. It tells the paired Watch to do the same, and the Watch applies this the next time the Watch app runs; workouts recorded on the Watch after you deleted are kept. Health data is handled separately: the delete dialog has its own "Also delete from Health" switch (off by default) that removes the workouts the App saved to Health, and it only deletes the ones it created. Everything else in Health remains under your control in the Health app.</li>
+                <li><strong>Runs from other apps:</strong> turning off Import Runs from Other Apps (Settings → Data &amp; Privacy) deletes the cache at once; the originals stay in Health. Delete All Data also deletes it. You can hide a single imported run from History; hiding does not change Health.</li>
                 <li><strong>Uninstall:</strong> removing the App removes its data from that device, except the cached subscription status in the iOS Keychain, which iOS may keep and which the App reuses if you install it again (use Delete All Data before uninstalling to clear it). Workouts already saved to Health stay in Health until you delete them there.</li>
                 <li><strong>Subscription:</strong> the subscription itself is managed by Apple; the App keeps only the cached status described above.</li>
             </ul>
@@ -607,7 +617,7 @@
         <div class="section">
             <h2>19. Changes to This Policy</h2>
             <p>If we change this policy, we will update the Effective Date above and publish the new version on this page. Significant changes will also be noted in the App Store or Google Play release notes, and if a change adds new data processing, we will update this policy before releasing the feature.</p>
-            <p>Previous versions: September 30, 2026 (iPhone and Apple Watch only); October 3, 2026 (all versions, before version 1.1.0 added Firebase crash reports and app statistics, and share shots).</p>
+            <p>Previous versions: September 30, 2026 (iPhone and Apple Watch only); October 3, 2026 (all versions, before version 1.1.0 added Firebase crash reports and app statistics, and share shots); October 8, 2026 (before version 1.2.0 added reading running workouts that other apps saved to Health on iPhone, and the share shots and recaps that can include them).</p>
         </div>
 
         <div class="section">
