@@ -153,17 +153,17 @@
         </div>
 
         <h1>RunVue Privacy Policy</h1>
-        <p class="update-date">Effective Date: October 1, 2026 · Last updated: October 10, 2026</p>
+        <p class="update-date">Effective Date: October 1, 2026 · Last updated: October 21, 2026</p>
 
         <div class="highlight">
-            <p><strong>Short version:</strong> the iOS app shows no ads and collects no personal data. The "Android app only" section further down applies only to the Android app.</p>
+            <p><strong>Short version:</strong> the free iOS version shows an interstitial ad after you save a video (Pro has no ads), and the iOS app includes Google AdMob and the Meta SDK for ads and install measurement. It does not collect your health, route or precise location data and never passes them to an ad SDK. The "Android app only" section further down applies only to the Android app.</p>
         </div>
 
         <p>RunVue ("the App", "we", "our") is developed and operated by the developer reachable at setlog.net</p>
-        <p>RunVue turns your runs into 3D replay videos entirely on your device. The <strong>iOS app (iPhone)</strong> reads your runs from Apple's Health app. It has no user accounts, no advertising, no tracking, and no analytics or tracking SDKs of its own. This Privacy Policy explains what the App accesses on your device, how it is used, and your rights regarding that information. Everything from here to the "Android app only" heading describes the iOS app.</p>
+        <p>RunVue turns your runs into 3D replay videos entirely on your device. The <strong>iOS app (iPhone)</strong> reads your runs from Apple's Health app. It has no user accounts and no analytics or tracking SDKs of its own. The free version shows Google AdMob ads, and the app includes the Meta SDK for ad install measurement (see "Ads and Ad Measurement (iOS)" below). This Privacy Policy explains what the App accesses on your device, how it is used, and your rights regarding that information. Everything from here to the "Android app only" heading describes the iOS app.</p>
 
         <div class="highlight">
-            <p><strong>In short (iOS):</strong> the developer does not collect your health or route data. Your health and route data (read from Apple Health, read-only) are processed entirely on your device and never sent to any server. The iOS app contains no ads and does not track you. The only thing it downloads from our server is the map data needed to build a video, and that request contains only a coarse map tile (grid cell) number &mdash; no route, coordinates, device identifier, or account information. Our hosting provider, Cloudflare, may process your IP address when you make that request. Purchases are handled by Apple through StoreKit. Your health data is never sold, never shared with third parties, and never used for advertising.</p>
+            <p><strong>In short (iOS):</strong> the developer does not collect your health or route data. Your health and route data (read from Apple Health, read-only) are processed entirely on your device and never sent to any server. The free iOS version shows an interstitial ad after you save a video, and Pro has no ads. Your advertising identifier (IDFA) is used only if you choose "Allow" on the tracking prompt, and your health, route and precise location are never passed to an ad SDK. The only thing it downloads from our server is the map data needed to build a video, and that request contains only a coarse map tile (grid cell) number &mdash; no route, coordinates, device identifier, or account information. Our hosting provider, Cloudflare, may process your IP address when you make that request. Purchases are handled by Apple through StoreKit. Your health data is never sold, never shared with third parties, and never used for advertising.</p>
         </div>
 
         <div class="section">
@@ -224,8 +224,19 @@
                 <li>GPX/FIT/zip files you choose are read on your device and converted into a run record. The original file is not kept once parsing finishes.</li>
             </ul>
 
-            <h3>No Advertising or Tracking</h3>
-            <p>The iPhone app has no advertising. It does not use advertising identifiers (IDFA) or any third-party analytics, advertising, attribution, or crash-reporting SDKs, and it does not track you across other apps or websites.</p>
+            <h3>Ads and Ad Measurement (iOS)</h3>
+            <p>The free version of RunVue on iPhone shows <strong>one interstitial ad right after you save a video, at most once per hour</strong>. With RunVue Pro (including trial and grace periods) the ads SDK is not started and no ad requests are sent. No ads appear while a video is being created, previewed or saved.</p>
+            <ul>
+                <li><strong>Google AdMob / User Messaging Platform (UMP):</strong> ads are provided by Google. Where consent is required (for example the EEA and UK), a Google UMP consent form is shown. Google receives your IP address (used to estimate a general location), ad impressions and clicks and app interactions, device identifiers and diagnostics; if you allow tracking, your advertising identifier (IDFA) is used for personalized ads.</li>
+                <li><strong>Meta SDK:</strong> to measure whether an install followed one of our Meta (Facebook / Instagram) ads, install and app-open events with session length, app version, device model, iOS version, language/region, time zone, carrier name, screen size, a random app-scoped identifier and your IP address are sent to Meta (graph.facebook.com). Depending on server-side settings, the Meta SDK may also send its own error and crash information to Meta.</li>
+                <li><strong>Where consent is required (for example the EEA, UK and Switzerland, or when the region cannot be determined):</strong> the Meta SDK is started only if you have consented to storing/accessing information, ad performance measurement and market research in the ad consent form, and it is stopped as soon as you withdraw consent in Settings. If you have not been through the consent form, nothing is sent to Meta.</li>
+                <li><strong>US state privacy laws:</strong> if you opt out of sale/sharing, the Meta SDK is started with Limited Data Use (LDU) turned on.</li>
+                <li><strong>Tracking permission (ATT):</strong> after you save your first video, and before the first ad is prepared, you see the system "Allow tracking" prompt once. If you <strong>allow</strong> it, your advertising identifier (IDFA) is used for Google's personalized ads and Meta's ad measurement. If you <strong>do not allow</strong> it, no IDFA is collected and non-personalized ads are shown. You can change this any time in Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+                <li><strong>What is not sent:</strong> your route, coordinates or precise location; health data (including heart rate and workout records); photos; your name or email; purchase history. Ad requests contain no keywords, content URLs, location or extra targeting data, and the app has no code that passes this data to an ad SDK. Your health and route data never leave your device.</li>
+                <li><strong>Purpose:</strong> showing ads to fund the free version, measuring ad performance (including Apple SKAdNetwork and Meta aggregated measurement), fraud prevention and SDK diagnostics.</li>
+                <li><strong>Use and retention:</strong> Google and Meta process the data under their own privacy policies (<a href="https://policies.google.com/privacy">Google</a> · <a href="https://www.facebook.com/privacy/policy/">Meta</a>). We do not receive or store it ourselves.</li>
+                <li><strong>Choices:</strong> RunVue Pro removes ads. Turn tracking off in Settings &gt; Privacy &amp; Security &gt; Tracking; deleting the app deletes the random identifier on your device. Free users in regions where a consent form is required can change or withdraw their consent again in the app under Settings &gt; "Ad privacy choices".</li>
+            </ul>
         </div>
 
         <div class="section">
@@ -251,7 +262,7 @@
             <h2>iPhone: Diagnostics (Only If You Choose)</h2>
 
             <p>If something goes wrong, you can export a diagnostics file from Settings → Advanced → Diagnostic Log. Nothing is sent automatically. The file is created on your device and leaves it only if you pick a destination in the share sheet. The diagnostics file contains things like device model, iOS version, app version, per-step processing times, and error codes; <strong>it never contains coordinates, place names, or any value that could identify a location such as a home address</strong>.</p>
-            <p>MetricKit records only diagnostic counts on your device and does not transmit them automatically. The App has no separate crash-reporting SDK.</p>
+            <p>MetricKit records only diagnostic counts on your device and does not transmit them automatically. The App itself has no separate crash-reporting SDK; depending on server-side settings, the Meta SDK may send its own error and crash information to Meta.</p>
         </div>
 
         <div class="section">
@@ -483,9 +494,9 @@
                 <li>Your health data — it is never sent off your device by the App, and never given to the ad SDK</li>
                 <li>Contacts, existing photos or videos in your library, or browsing history</li>
                 <li>Payment information — purchases are handled entirely by Apple (iPhone) or Google Play (Android)</li>
-                <li>Analytics, usage statistics, or crash reports sent automatically by the App's own code</li>
+                <li>Analytics, usage statistics, or crash reports sent automatically by the App's own code (on iOS, except what the ad and measurement SDKs described in "Ads and Ad Measurement (iOS)" collect)</li>
             </ul>
-            <p>Advertising identifiers: the iPhone app does not access the advertising identifier (IDFA) and does not track you. The Android app's free version uses the Android advertising ID only through Google AdMob, as described in "Android: Advertising"; Pro subscribers' devices do not start the ad SDK.</p>
+            <p>Advertising identifiers: the iPhone app accesses the advertising identifier (IDFA) only if you choose "Allow" on the tracking prompt (for Google personalized ads and Meta ad measurement), and does not access it otherwise. The ad SDKs are not started on Pro subscribers' devices. The Android app's free version uses the Android advertising ID only through Google AdMob, as described in "Android: Advertising"; Pro subscribers' devices do not start the ad SDK.</p>
         </div>
 
         <div class="section">
@@ -494,7 +505,7 @@
             <p>We do not sell or rent your data. Your health and route data are not shared with anyone, and the developer receives none of it. The services involved are:</p>
             <ul>
                 <li><strong>Both versions:</strong> Cloudflare, which hosts our static map storage (<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>), and Tally, which hosts our contact form if you choose to use it.</li>
-                <li><strong>iPhone:</strong> Apple's App Store and StoreKit for purchases, and HealthKit and the Health app for the data you choose to let the App read (<a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>).</li>
+                <li><strong>iPhone:</strong> Google AdMob and User Messaging Platform (ads and consent, free version only), the Meta SDK (ad install measurement), Apple's App Store and StoreKit for purchases, and HealthKit and the Health app for the data you choose to let the App read (<a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>).</li>
                 <li><strong>Android:</strong> Google AdMob and User Messaging Platform (ads and consent, free version only), Google Play Billing (purchases), and Health Connect (the on-device health data store you control). Google's handling is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
             </ul>
             <p>We may disclose information we hold (only messages and files you sent us) if required by law. Map data is sourced from © OpenStreetMap contributors and the Overture Maps Foundation (ODbL).</p>
@@ -515,7 +526,7 @@
         <div class="section">
             <h2>Children's Privacy</h2>
 
-            <p>RunVue is not directed to children and does not knowingly collect information from children under 13. The App has no accounts and collects no personally identifiable information itself. On Android, ads are not configured as child-directed and are limited to a maximum content rating of "Teen". If you believe a child has sent us personal information, contact us and we will delete it.</p>
+            <p>RunVue is not directed to children and does not knowingly collect information from children under 13. The App has no accounts and collects no personally identifiable information itself (see "Ads and Ad Measurement (iOS)" for what the iOS ad and measurement SDKs collect). On Android, ads are not configured as child-directed and are limited to a maximum content rating of "Teen". If you believe a child has sent us personal information, contact us and we will delete it.</p>
             <!-- [법무 확인] Play target audience must be set to exclude under-13s (ads use the default — child-directed tag unset). Confirm the target age group declared in Play Console matches this section. -->
         </div>
 
@@ -523,8 +534,8 @@
             <h2>Hosting Providers and International Data Transfers</h2>
 
             <p>Our map storage is hosted by Cloudflare, Inc. (United States; requests are served from a Cloudflare data center close to you). When the App downloads map data, Cloudflare receives your IP address and the name of the file requested. We do not store request logs; Cloudflare may keep short-lived technical counters (for example, for rate limiting) under its own policy. Your health data and routes are never sent to Cloudflare or anyone else.</p>
-            <p>On Android, information collected by Google's ad and consent SDKs (free version) and by Google Play Billing is processed by Google LLC and its affiliates, including in the United States, under Google's safeguards. If you submit the contact form, it is hosted by Tally BV (Belgium, EU) and receives what you type, including your email address if you enter one. On iPhone, purchases are processed directly by Apple.</p>
-            <p>If you do not want these transfers, you can avoid downloading maps for new areas, subscribe to Pro on Android (the ad SDK is not started), not use the contact form, or stop using the App.</p>
+            <p>On Android, information collected by Google's ad and consent SDKs (free version) and by Google Play Billing is processed by Google LLC and its affiliates, including in the United States, under Google's safeguards. If you submit the contact form, it is hosted by Tally BV (Belgium, EU) and receives what you type, including your email address if you enter one. On iPhone, the free version's Google AdMob / UMP SDKs send the data described in "Ads and Ad Measurement (iOS)" to Google LLC, and the Meta SDK sends install-measurement data to Meta Platforms, Inc. (United States), under their own safeguards; purchases are processed directly by Apple.</p>
+            <p>If you do not want these transfers, you can avoid downloading maps for new areas, subscribe to Pro (the ad SDK is not started on iPhone or Android), turn off tracking in iOS Settings, not use the contact form, or stop using the App.</p>
         </div>
 
         <div class="section">
@@ -537,6 +548,7 @@
                 <li>October 2, 2026: Corrected the Pro subscription description and the description of how subscription status is kept; added hosting and international transfer details</li>
                 <li>October 3, 2026: Added the Android version (Health Connect, Google AdMob ads and consent for free users, Google Play Billing, Android backup and deletion); separated iPhone-only statements; added "Your Rights"</li>
                 <li>October 10, 2026: Updated the Pro scope (the Oblique and Aerial camera views are part of Pro; map themes and background music are free); corrected the wording about ad requests and location (the ad SDK may estimate a general location from the IP address); separated the iOS and Android sections, with all advertising, advertising ID, Health Connect and Google Play Billing content now under "Android app only"</li>
+                <li>October 21, 2026: iOS 1.1.5 &mdash; added the interstitial ad after saving in the free version (Google AdMob, UMP, ATT) and ad install measurement (Meta SDK); the condition for starting the Meta SDK in regions that require consent (EEA, UK, Switzerland); US state Limited Data Use (LDU); how to opt out or withdraw consent; stated that Pro has no ads; added Meta to the international transfers. Unchanged: health, route and precise location data never leave your device and are never given to an ad SDK</li>
             </ul>
         </div>
 
